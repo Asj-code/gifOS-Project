@@ -82,7 +82,7 @@ header {
   margin-bottom: 6.5px;
   margin-right: 10px;
   position: relative;
-  background: #000;
+  background: #572EE5;
   z-index: 1;
   transform-origin: 3px 0px;
   transition: transform 0.5s ease, opacity 0.55s ease;
@@ -285,6 +285,11 @@ footer P {
   margin-bottom: 20px;
 }
 
+@media screen and (min-width: 1220px) {
+  footer ul {
+    display: flex;
+  }
+}
 footer li {
   display: inline;
 }
@@ -303,8 +308,36 @@ footer li a img {
 }
 @media screen and (min-width: 1220px) {
   .copyright {
-    float: right;
+    margin-top: 0;
   }
+}
+
+/* Pages */
+.favoritos {
+  margin-bottom: 40px;
+}
+
+.fav-icons {
+  display: flex;
+  justify-content: center;
+}
+.fav-icons img {
+  height: 100%;
+  margin-bottom: 10px;
+}
+
+.fav-images {
+  padding: 0 30px 30px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+@media screen and (min-width: 1220px) {
+  .fav-images {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.fav-images img {
+  width: 125px;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -16,6 +16,11 @@ footer {
 }
 
 footer {
+    ul {
+        @media screen and (min-width: 1220px) {
+            display: flex;
+        }
+    }
     li {
         display: inline;
         a {
@@ -33,7 +38,9 @@ footer {
 .copyright {
     text-align: center; 
     margin-top: 20px;
-    @media screen and (min-width: 1220px){
-        float: right; 
+    @media screen and (min-width: 1220px){ 
+        margin-top: 0;
+        
     }
 }
+

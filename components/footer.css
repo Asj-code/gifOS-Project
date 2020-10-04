@@ -16,6 +16,14 @@ footer P {
   margin-bottom: 20px;
 }
 
+@media screen and (min-width: 1220px) {
+  footer ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 footer li {
   display: inline;
 }
@@ -37,7 +45,7 @@ footer li a img {
 
 @media screen and (min-width: 1220px) {
   .copyright {
-    float: right;
+    margin-top: 0;
   }
 }
 /*# sourceMappingURL=footer.css.map */
