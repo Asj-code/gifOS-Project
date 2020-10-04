@@ -1,0 +1,16 @@
+#trending {
+  background-color: #F3F5F8;
+  width: 100%;
+  height: 640px;
+}
+
+.trending-text {
+  text-align: center;
+  padding: 100px 0;
+}
+
+.trending-text p {
+  color: black;
+  padding-top: 20px;
+}
+/*# sourceMappingURL=trending.css.map */
