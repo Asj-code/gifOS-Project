@@ -62,8 +62,7 @@ header {
 }
 .menu a:hover {
   cursor: pointer;
-  color: #00F3BB;
-  text-decoration: line-through;
+  border-bottom: 2px solid #5ED7C6;
 }
 .menu a:active {
   color: rgba(6, 10, 36, 0.56);
@@ -138,12 +137,23 @@ header {
   }
 }
 
-button {
-  float: right;
+/* Gifos create button */
+.btn-gifos {
+  display: none;
   cursor: pointer;
   border: none;
   border-radius: 50%;
   background-color: #FFFFFF;
+  width: 40px;
+  margin-top: 10px;
+  /*&:hover {
+
+  }*/
+}
+@media screen and (min-width: 1220px) {
+  .btn-gifos {
+    display: block;
+  }
 }
 
 * {
@@ -219,9 +229,9 @@ h1 span {
 }
 .search img {
   width: 20px;
-  height: 20px;
-  margin-left: 200px;
-  margin-top: 15px;
+  height: 100%;
+  float: right;
+  margin-right: 30px;
   cursor: pointer;
 }
 
@@ -262,7 +272,8 @@ footer {
   width: 100%;
   height: 116px;
   background-color: #FFFFFF;
-  padding: 50px;
+  padding: 50px 40px;
+  text-align: center;
 }
 footer P {
   font-family: "Roboto", sans-serif;
@@ -270,22 +281,30 @@ footer P {
   font-size: 13px;
   color: #000000;
   letter-spacing: 0;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 footer li {
-  display: inline-block;
+  display: inline;
 }
 footer li a {
   color: #CDD6E0;
-  padding: 15px;
+  padding-right: 10px;
 }
 footer li a img {
   width: 20px;
   height: 20px;
 }
 
-ul .copyright {
-  float: right;
+.copyright {
+  text-align: center;
+  margin-top: 20px;
+}
+@media screen and (min-width: 1220px) {
+  .copyright {
+    float: right;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

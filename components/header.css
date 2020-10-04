@@ -4,25 +4,188 @@ header {
   font-size: 13px;
   line-height: 16px;
   color: #572EE5;
+  padding: 10px 30px 0;
 }
 
-.navbar {
-  padding: 20px 100px;
-}
-
-.navbar li {
-  display: inline-block;
+/* Hamburguer Menu */
+.menu {
   float: right;
-  padding: 20px;
-  margin-right: 20px;
 }
 
-.navbar button {
-  width: 54px;
-  height: 54px;
-  background-color: #FFFFFF;
-  border: 1px solid #572EE5;
+.menu ul {
+  width: 100%;
+  position: absolute;
+  top: 70px;
+  left: 5px;
+  overflow: hidden;
+  list-style: none;
+  background: #572EE5;
+  opacity: 90%;
+  height: 0;
+}
+
+@media screen and (min-width: 1220px) {
+  .menu ul {
+    top: 0;
+    overflow: hidden;
+    background: unset;
+    height: unset;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+}
+
+.menu li {
+  position: relative;
+  padding: 0 20px;
+  margin-top: 30px;
+  font-size: 15px;
+  color: #FFFFFF;
+  text-align: center;
+  line-height: 60px;
+}
+
+@media screen and (min-width: 1220px) {
+  .menu li {
+    text-transform: uppercase;
+    margin: 0;
+  }
+}
+
+.menu a {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  padding: 16px 0;
+  line-height: 28px;
+  display: block;
+  font-size: 16px;
+}
+
+.menu a:hover {
+  cursor: pointer;
+  border-bottom: 2px solid #5ED7C6;
+}
+
+.menu a:active {
+  color: rgba(6, 10, 36, 0.56);
+}
+
+@media screen and (min-width: 1220px) {
+  .menu a {
+    display: inline-block;
+    color: #572EE5;
+    padding: 0;
+  }
+}
+
+.bars {
+  display: block;
+  width: 25px;
+  height: 2px;
+  margin-bottom: 6.5px;
+  margin-right: 10px;
+  position: relative;
+  background: #000;
+  z-index: 1;
+  -webkit-transform-origin: 3px 0px;
+          transform-origin: 3px 0px;
+  -webkit-transition: opacity 0.55s ease, -webkit-transform 0.5s ease;
+  transition: opacity 0.55s ease, -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease, opacity 0.55s ease;
+  transition: transform 0.5s ease, opacity 0.55s ease, -webkit-transform 0.5s ease;
+}
+
+.bars:first-child {
+  -webkit-transform-origin: 0% 0%;
+          transform-origin: 0% 0%;
+}
+
+.bars:nth-last-child(2) {
+  -webkit-transform-origin: 0% 100%;
+          transform-origin: 0% 100%;
+}
+
+@media screen and (min-width: 1220px) {
+  .bars {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .bars {
+    margin-right: 20px;
+  }
+}
+
+/* Input type:checkbox style */
+.button {
+  display: block;
+  width: 40px;
+  height: 32px;
+  opacity: 0;
+  z-index: 2;
+  position: absolute;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.button:checked ~ ul {
+  height: 100%;
+  -webkit-transition: height 0.5s ease-in-out;
+  transition: height 0.5s ease-in-out;
+}
+
+.button:checked ~ span {
+  opacity: 1;
+  -webkit-transform: rotate(45deg) translate(2px, 1px);
+          transform: rotate(45deg) translate(2px, 1px);
+}
+
+.button:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  -webkit-transform: rotate(0deg) scale(0.2, 0.2);
+          transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+.button:checked ~ span:nth-last-child(2) {
+  -webkit-transform: rotate(-45deg) translate(1px, 0px);
+          transform: rotate(-45deg) translate(1px, 0px);
+}
+
+@media screen and (min-width: 1220px) {
+  .button {
+    display: none;
+  }
+}
+
+/* Gifos create button */
+.btn-gifos {
+  display: none;
+  cursor: pointer;
+  border: none;
   border-radius: 50%;
-  float: right;
+  background-color: #FFFFFF;
+  width: 40px;
+  margin-top: 10px;
+  /*&:hover {
+
+    }*/
+}
+
+@media screen and (min-width: 1220px) {
+  .btn-gifos {
+    display: block;
+  }
 }
 /*# sourceMappingURL=header.css.map */

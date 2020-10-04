@@ -52,9 +52,9 @@ h1 {
         }
         img {
             width: 20px;
-            height: 20px;
-            margin-left: 200px;
-            margin-top: 15px;
+            height: 100%;
+            float: right;
+            margin-right: 30px;
             cursor: pointer;
         }  
 }
