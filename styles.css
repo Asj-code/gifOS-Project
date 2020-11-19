@@ -162,6 +162,11 @@ header {
   box-sizing: border-box;
 }
 
+body {
+  border-top: #572EE5 5px solid;
+  border-bottom: #572EE5 5px solid;
+}
+
 main {
   font-family: "Montserrat", sans-serif;
   color: #572EE5;
@@ -274,18 +279,16 @@ h1 span {
 }
 
 @media screen and (min-width: 1220px) {
-  .trending-cards {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    padding: 0 20px;
+  .main-trendign-container {
+    display: flex;
+    justify-content: space-between;
   }
-  .trending-cards img {
-    width: 300px;
-    margin: 10px;
+  .main-trendign-container iframe {
+    margin: 0 10px;
   }
-  .trending-cards .slider {
-    width: auto;
-    margin-top: 100px;
+
+  .slider {
+    padding: 0 80px;
   }
 }
 footer {

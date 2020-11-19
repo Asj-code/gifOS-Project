@@ -27,18 +27,16 @@
 }
 
 @media screen and (min-width: 1220px) {
-    .trending-cards {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        padding: 0 20px;
-        img {
-            width: 300px;
-            margin: 10px;
+    .main-trendign-container {
+        display: flex;
+        justify-content: space-between;
+        iframe {
+            margin: 0 10px;
         }
-        .slider {
-            width: auto;
-            margin-top: 100px;
         }
+    .slider {
+        padding: 0 80px;
     }
-}
+    }
+
 
