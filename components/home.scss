@@ -1,3 +1,5 @@
+@import 'variables';
+
 #home {
     width: 100%;
     margin-top: 50px;
@@ -7,19 +9,19 @@ h1 {
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     font-size: 25px;
-    color: #572EE5;
+    color: $base-color-light;
     text-align: center;
     line-height: 33px;
     padding: 0 40px 30px;
     @media screen and (min-width: 1220px) {
         font-size: 35px;
-        color: #572EE5;
+        color: $base-color-light;
         text-align: center;
         line-height: 50px;
         padding: 50px 300px;
     }
     span {
-        color: #50E3C2;
+        color: $special-color;
     }
 }
 
@@ -41,8 +43,8 @@ h1 {
         div {
             width: 250px;
             height: 50px;
-            background: #FFFFFF;
-            border: 1px solid #572EE5;
+            background: $bg-color-light;
+            border: 1px solid $base-color-light;
             border-radius: 27px;
             border-radius: 27px;
             cursor: text;
@@ -68,7 +70,7 @@ h1 {
         font-family: 'Montserrat', sans-serif;
         font-weight: 500;
         font-size: 14px;
-        color: #572EE5;
+        color: $base-color-light;
         text-align: center;
         line-height: 25px;
     }

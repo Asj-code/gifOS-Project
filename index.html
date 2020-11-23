@@ -13,7 +13,7 @@
 <body>
     <header>
         <div class="navbar">
-            <img class="logo" src="assets/logo-mobile.svg" alt="logo web image">
+            <img id="logo" class="logo" src="assets/logo-mobile.svg" alt="logo web image">
             <nav class="menu">
                 <input class="button" type="checkbox" id="checkbox" />
                 <span class="bars"></span>
@@ -21,13 +21,13 @@
                 <span class="bars"></span>
                 <ul>
                     <li>
-                        <a href="#modonocturno">Modo nocturno</a></li>
+                        <a class="text" href="#modonocturno" id="change-mode">Modo nocturno</a></li>
                     <li>
-                        <a href="favoritos.html">Favoritos</a></li>
+                        <a class="text" href="favoritos.html">Favoritos</a></li>
                     <li>
-                        <a href="misgifos.html">Mis GIFOS</a></li>
+                        <a class="text" href="misgifos.html">Mis GIFOS</a></li>
                         <li>
-                            <img class="btn-gifos" src="assets/button-crear-gifo.svg" alt="Botón para crear gifos">
+                            <img id="btn-gifos" class="btn-gifos" src="assets/button-crear-gifo.svg" alt="create gifs button">
                         </li>
                 </ul>
                 
@@ -39,37 +39,37 @@
 
     <main>
         <section id="home">
-            <h1>Inspírate, busca, guarda y crea los mejores <span>GIFOS</span></h1>
+            <h1 class="text" >Inspírate, busca, guarda y crea los mejores <span>GIFOS</span></h1>
 
             <div class="main-image">
                 <img src="assets/ilustra_header.svg" alt="group of people huging each other">
             </div>
             
-            <div class="search">
+            <div id="searchBar" class="search">
                 <div>
-                    <img src="assets/icon-search.svg" alt="search icon">
+                    <img id="searchIcon" src="assets/icon-search.svg" alt="search icon">
                 </div>  
             </div>
 
             <div class="main-text">
-                <p>Trending:</p>
-                <p>Reactions, Entertainment, Sports, Stickers, Artists</p>
+                <p class="text" >Trending:</p>
+                <p class="text" >Reactions, Entertainment, Sports, Stickers, Artists</p>
             </div>
         </section>
 
         <section id="trending">
 
             <div class="trending-text">
-                <h2>Trending GIFOS</h2>
-                <p>Mirá los últimos GIFOS de nuestra comunidad.</p>
+                <h2 class="text">Trending GIFOS</h2>
+                <p class="text">Mirá los últimos GIFOS de nuestra comunidad.</p>
             </div>
 
             <div class="main-trendign-container">
-                <img class="slider" src="assets/button-slider-left.svg" alt="slider left button">
+                <img class="slider" id="left" src="assets/button-slider-left.svg" alt="slider left button">
                 <div id="cards-container">
                     <!-- Imágenes creadas con javascript -->
                 </div>
-                <img class="slider" src="assets/Button-Slider-right.svg" alt="slider right button">
+                <img class="slider" id="right" src="assets/Button-Slider-right.svg" alt="slider right button">
             </div>
             
         </section>
@@ -79,12 +79,13 @@
     <footer>
         
         <ul>
-            <li><P class="share">Compartir en:</P></li>
+            <li><P class="share text">Compartir en:</P></li>
             <li><a href="https://www.facebook.com/" target="_blank"><img src="assets/icon_facebook.svg" alt="facebook icon"></a></li>
             <li><a href="https://www.twitter.com/" target="_blank"><img src="assets/icon-twitter.svg" alt="twitter icon"></a></li>
             <li><a href="https://www.instagram.com/" target="_blank"><img src="assets/icon_instagram.svg" alt="instagram icon"></a></li>
-            <li><p class="copyright">©️GIFOS 2020 All Rights Reserved.</p></li>
+            
         </ul>
+        <li><p class="copyright text">©️GIFOS 2020 All Rights Reserved.</p></li>
         
     </footer>
 
@@ -95,5 +96,6 @@
 
 
     <script src="index.js"></script>
+    <script src="dark-mode.js"></script>
 </body>
 </html>

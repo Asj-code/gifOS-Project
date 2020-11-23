@@ -54,7 +54,7 @@ header {
 .menu a {
   position: relative;
   text-decoration: none;
-  color: white;
+  color: #FFFFFF;
   padding: 16px 0;
   line-height: 28px;
   display: block;
@@ -62,7 +62,7 @@ header {
 }
 .menu a:hover {
   cursor: pointer;
-  border-bottom: 2px solid #5ED7C6;
+  border-bottom: 2px solid #50E3C2;
 }
 .menu a:active {
   color: rgba(6, 10, 36, 0.56);
@@ -306,8 +306,13 @@ footer P {
   letter-spacing: 0;
   text-align: center;
   margin-bottom: 20px;
+  padding-right: 20px;
 }
 
+footer {
+  display: flex;
+  justify-content: space-between;
+}
 @media screen and (min-width: 1220px) {
   footer ul {
     display: flex;
@@ -318,21 +323,11 @@ footer li {
 }
 footer li a {
   color: #CDD6E0;
-  padding-right: 10px;
+  padding-right: 30px;
 }
 footer li a img {
   width: 20px;
   height: 20px;
-}
-
-.copyright {
-  text-align: center;
-  margin-top: 20px;
-}
-@media screen and (min-width: 1220px) {
-  .copyright {
-    margin-top: 0;
-  }
 }
 
 /* Pages */
@@ -361,6 +356,30 @@ footer li a img {
 }
 .fav-images img {
   width: 125px;
+}
+
+/* Dark Mode */
+body.dark {
+  background-color: #37383C;
+  border-top: #FFFFFF 5px solid;
+  border-bottom: #FFFFFF 5px solid;
+}
+
+body.dark footer {
+  background-color: #37383C;
+}
+
+body.dark .text {
+  color: #FFFFFF;
+}
+
+#trending.dark-bg {
+  background-color: #222326;
+}
+
+#searchBar.dark-border div {
+  background: #37383C;
+  border: 1px solid #FFFFFF;
 }
 
 /*# sourceMappingURL=styles.css.map */

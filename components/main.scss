@@ -1,3 +1,5 @@
+@import 'variables';
+
 
 * {
     margin: 0;
@@ -6,11 +8,12 @@
 }
 
 body {
-    border-top: #572EE5 5px solid;
-    border-bottom: #572EE5 5px solid;
+    border-top: $base-color-light 5px solid;
+    border-bottom: $base-color-light 5px solid;
 }
+
 
 main {
     font-family: 'Montserrat', sans-serif;
-    color: #572EE5;
+    color: $base-color-light;
 }

@@ -12,10 +12,13 @@ footer {
         letter-spacing: 0;
         text-align: center; 
         margin-bottom: 20px;
+        padding-right: 20px;
     }
 }
 
 footer {
+    display: flex;
+    justify-content: space-between;
     ul {
         @media screen and (min-width: 1220px) {
             display: flex;
@@ -25,7 +28,7 @@ footer {
         display: inline;
         a {
             color: #CDD6E0;
-            padding-right: 10px;
+            padding-right: 30px;
             img {
                 width: 20px;
                 height: 20px;
@@ -35,12 +38,4 @@ footer {
 }
 
 
-.copyright {
-    text-align: center; 
-    margin-top: 20px;
-    @media screen and (min-width: 1220px){ 
-        margin-top: 0;
-        
-    }
-}
 

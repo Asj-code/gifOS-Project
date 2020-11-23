@@ -1,0 +1,26 @@
+@import 'variables';
+
+body.dark {
+    background-color: $bg-color-dark;
+    border-top: $bg-color-light 5px solid;
+    border-bottom: $bg-color-light 5px solid;
+}
+
+body.dark footer {
+    background-color: $bg-color-dark;
+
+}
+
+body.dark .text {
+    color: $bg-color-light;
+}
+
+#trending.dark-bg {
+    background-color: $trending-bg-color-dark;
+}
+
+#searchBar.dark-border div{
+    background: $bg-color-dark;
+    border: 1px solid $bg-color-light;
+}
+
