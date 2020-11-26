@@ -82,10 +82,11 @@ darkMode();
 //ADD TRENDING GIFS FUNCTION
 
 const api_key = 'IxndpBv8XXCauGIwjs48PBQm8ZbXIwQq';
+var offset = 0;
 
-async function getTrendingGifs() {
-  
-    let url = `https://api.giphy.com/v1/gifs/trending?api_key=${api_key}&offset=0&limit=3`;
+async function getTrendingGifs(offset) {
+    
+    let url = `https://api.giphy.com/v1/gifs/trending?api_key=${api_key}&offset=${offset}&limit=3`;
     let response = await fetch(url);
     let result = await response.json();
     createThreeGifCards(result);
@@ -95,11 +96,16 @@ async function getTrendingGifs() {
 
 
 function createThreeGifCards (result) {
-    for(let i = 0; i < 3; i++){
-        let gif = result.data[i];
-        let card = createGifCard(gif);
-        document.getElementById('main-gifs-container').appendChild(card);
-     }
+
+    let card1 = createGifCard(result.data[0]);
+    let card2 = createGifCard(result.data[1]);
+    let card3 = createGifCard(result.data[2]);
+
+    let contenedor = document.getElementById('main-gifs-container');
+        // contenedor.appendChild(card);
+    contenedor.replaceChild(card1, contenedor.children[0]);
+    contenedor.replaceChild(card2, contenedor.children[1]);
+    contenedor.replaceChild(card3, contenedor.children[2]);
 }
 
 
@@ -112,6 +118,20 @@ function createGifCard(gif) {
 };
 
 getTrendingGifs();
+
+////////////SLIDERS BUTTONS FUNCTION //////////
+sliderRight.addEventListener('click', () => {
+    offset = offset + 3;
+    getTrendingGifs(offset);
+});
+
+sliderLeft.addEventListener('click', () => {
+    if(offset >= 3) {
+        offset = offset - 3;
+        getTrendingGifs(offset);
+    }
+});
+
 
 
 //////////////////////SEARCH BAR FUNCTION/////////////////////////////////////
@@ -164,7 +184,6 @@ d.addEventListener('keypress', async event => {
 
 
 
-    
 
 
 
