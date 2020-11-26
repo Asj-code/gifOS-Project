@@ -37,31 +37,34 @@ h1 {
         }
     }     
 }
-.search {
-        display: flex;
-        justify-content: center;
-        div {
-            width: 250px;
-            height: 50px;
-            background: $bg-color-light;
-            border: 1px solid $base-color-light;
-            border-radius: 27px;
-            border-radius: 27px;
-            cursor: text;
-            @media screen and (min-width: 1220px) {
-                width: 551px; 
-            }
-        }
-        img {
-            width: 20px;
-            height: 100%;
-            float: right;
-            margin-right: 30px;
-            cursor: pointer;
-        }  
-}
-    
 
+//// Search Bar ////
+
+.grid-fluid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.loader {
+    display: block;
+    margin: auto;
+}
+
+#input-ctn {
+    justify-content: center;
+    display: flex;
+}
+#search {
+    width: 250px;
+    height: 50px;
+    border: 1px solid $base-color-light;
+    border-radius: 27px;
+    padding: 0 10px;
+    cursor: text;
+    outline: none;
+    @media screen and (min-width: 1220px) {
+        width: 551px;
+    }
+}
 
 
 .main-text {

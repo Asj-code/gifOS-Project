@@ -2,16 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto&display=swap');
 
 /* Components */
-@import 'components/header';
-@import 'components/main';
-@import 'components/home';
-@import 'components/trending';
-@import 'components/variables';
-@import 'components/footer';
+@import 'Sass-components/header';
+@import 'Sass-components/main';
+@import 'Sass-components/home';
+@import 'Sass-components/trending';
+@import 'Sass-components/variables';
+@import 'Sass-components/footer';
 
 /* Pages */
-@import 'components/favoritos';
-@import 'components/misgifos';
+@import 'Sass-components/favoritos';
+@import 'Sass-components/misgifos';
 
 /* Dark Mode */
-@import 'components/dark-mode';
+@import 'Sass-components/dark-mode';

@@ -23,12 +23,20 @@
 
 /* Gifos section */
 
-
-.trending-cards {
+.slider {
     display: none;
 }
 
+#gifs-container {
+    display: flex;
+}
+#gif {
+    width: 200px;
+    margin: 10px;
+} 
+
 @media screen and (min-width: 1220px) {
+
     .main-trendign-container {
         display: flex;
         justify-content: space-between;
@@ -37,8 +45,22 @@
         }
         }
     .slider {
-        padding: 0 80px;
+        padding: 0 30px;
+        display: block;
     }
+    #main-gifs-container {
+        display: flex;
     }
+    #gif {
+        width: 300px;
+        height: 200px;
+        margin: 10px;
+    } 
+    .gif-img {
+        width: 300px;
+        height: 250px;
+        margin: 0 5px;
+    }
+}
 
 

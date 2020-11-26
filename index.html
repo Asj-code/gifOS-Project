@@ -41,15 +41,29 @@
         <section id="home">
             <h1 class="text" >Inspírate, busca, guarda y crea los mejores <span>GIFOS</span></h1>
 
-            <div class="main-image">
+           <div class="main-image">
                 <img src="assets/ilustra_header.svg" alt="group of people huging each other">
             </div>
-            
+ <!-- 
             <div id="searchBar" class="search">
-                <div>
-                    <img id="searchIcon" src="assets/icon-search.svg" alt="search icon">
-                </div>  
+                <input type="search" id="search">
+                <img id="searchIcon" src="assets/icon-search.svg" alt="search icon">
+            </div> -->
+
+            <div id="input-ctn">
+                <input type="search" id="search" placeholder="Search a GIF...">
             </div>
+            
+
+            <section id="gif-section" class="grid-fluid">
+                <template id="gif-template">
+                    <div class="show">
+                        <img id="search-gif">
+                        <h3 id="gif-title"></h3>
+                        <p id="gif-user"></p>
+                    </div>
+                </template>
+            </section>
 
             <div class="main-text">
                 <p class="text" >Trending:</p>
@@ -66,7 +80,7 @@
 
             <div class="main-trendign-container">
                 <img class="slider" id="left" src="assets/button-slider-left.svg" alt="slider left button">
-                <div id="cards-container">
+                <div id="main-gifs-container">
                     <!-- Imágenes creadas con javascript -->
                 </div>
                 <img class="slider" id="right" src="assets/Button-Slider-right.svg" alt="slider right button">
@@ -91,11 +105,7 @@
 
 
 
-
-
-
-
-    <script src="index.js"></script>
-    <script src="dark-mode.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/dark-mode.js"></script>
 </body>
 </html>
