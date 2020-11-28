@@ -11,9 +11,11 @@
 </head>
 
 <body>
+
+
     <header>
         <div class="navbar">
-            <img id="logo" class="logo" src="assets/logo-mobile.svg" alt="logo web image">
+            <a href="index.html"><img id="logo" class="logo" src="assets/logo-mobile.svg" alt="logo web image"></a>
             <nav class="menu">
                 <input class="button" type="checkbox" id="checkbox" />
                 <span class="bars"></span>
@@ -21,13 +23,13 @@
                 <span class="bars"></span>
                 <ul>
                     <li>
-                        <a class="text" href="#modonocturno" id="change-mode">Modo nocturno</a></li>
+                        <a class="text" id="change-mode">Modo nocturno</a></li>
                     <li>
                         <a class="text" href="favoritos.html">Favoritos</a></li>
                     <li>
                         <a class="text" href="misgifos.html">Mis GIFOS</a></li>
                         <li>
-                            <img id="btn-gifos" class="btn-gifos" src="assets/button-crear-gifo.svg" alt="create gifs button">
+                            <a href="crear-gifo.html"><img id="btn-gifos" class="btn-gifos" src="assets/button-crear-gifo.svg" alt="create gifs button"></a>
                         </li>
                 </ul>
                 
@@ -37,6 +39,9 @@
     </header>
 
 
+
+
+
     <main>
         <section id="home">
             <h1 class="text" >Inspírate, busca, guarda y crea los mejores <span>GIFOS</span></h1>
@@ -44,11 +49,7 @@
            <div class="main-image">
                 <img src="assets/ilustra_header.svg" alt="group of people huging each other">
             </div>
- <!-- 
-            <div id="searchBar" class="search">
-                <input type="search" id="search">
-                <img id="searchIcon" src="assets/icon-search.svg" alt="search icon">
-            </div> -->
+
 
             <div id="input-ctn">
                 <input type="search" id="search" placeholder="Search a GIF...">
@@ -113,6 +114,5 @@
 
 
     <script src="js/index.js"></script>
-    <script src="js/dark-mode.js"></script>
 </body>
 </html>

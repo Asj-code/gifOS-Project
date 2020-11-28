@@ -11,10 +11,6 @@
 </head>
 
 <body>
-
-
-
-
     <header>
         <div class="navbar">
             <a href="index.html"><img id="logo" class="logo" src="assets/logo-mobile.svg" alt="logo web image"></a>
@@ -29,9 +25,9 @@
                     <li>
                         <a class="text" href="favoritos.html">Favoritos</a></li>
                     <li>
-                        <a class="text active" href="#">Mis GIFOS</a></li>
+                        <a class="text" href="misgifos.html">Mis GIFOS</a></li>
                         <li>
-                            <a href="crear-gifo.html"><img id="btn-gifos" class="btn-gifos" src="assets/button-crear-gifo.svg" alt="create gifs button"></a>
+                            <a id="link-create" href="#"><img id="btn-gifos" class="btn-gifos" src="assets/button-crear-gifo.svg" alt="create gifs button"></a>
                         </li>
                 </ul>
                 
@@ -40,61 +36,63 @@
         </div>
     </header>
 
-
-
     <main>
-        <section id="home" class="favoritos">
-            <div class="fav-icons"><img src="assets/icon-mis-gifos.svg" alt="face icon"></div>
-            
-            <h1>Mis GIFOS</h1>
-
-            <div class="fav-icons"><img src="assets/icon-mis-gifos-sin-contenido.svg" alt=""></div>
-            
-            <div class="fav-icons">
-                <button class="fav-btn"><img src="assets/CTA-ver-mas.svg" alt="see more button"></button>
+        <section id="crear-gifo">
+            <div class="camara-img">
+                <img src="assets/camara.svg" alt="">
+                <!-- <img class="luz" src="assets/element-luz-camara.svg" alt=""> -->
             </div>
-            
+
+
+
+            <div class="create-card-container">
+                <h1 id="create-title" class="text" >Aquí podrás crear tus propios <span>GIFOS</span></h1>
+                <p class="text" id="create-paragraph">¡Crea tu GIFO en solo 3 pasos! (Sólo necesitas una cámara para grabar un video)</p>
+                
+            </div>
+
+            <div class="pelicula-img">
+                <img src="assets/pelicula.svg" alt="">
+            </div>
+
         </section>
 
-        <section id="trending">
 
-            <div class="trending-text">
-                <h2 class="text">Trending GIFOS</h2>
-                <p class="text">Mirá los últimos GIFOS de nuestra comunidad.</p>
-            </div>
 
-            <div class="main-trendign-container">
-            
-                    <img class="slider" id="left" src="assets/button-slider-left.svg" alt="slider left button">
-               
-                <div id="main-gifs-container">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <!-- Imágenes creadas con javascript -->
-                </div>
+        <div id="numbers">
+            <div id="bg-numb">1</div>
+            <div id="record-num">2</div>
+            <div>3</div>
+        </div>
+        <div class="line"></div>
+        <div id="btn-comenzar"><button>COMENZAR</button></div>
+        <div id="btn-si"><button>SI</button></div>
+        <div id="btn-grabar"><button>GRABAR</button></div>
+        <div id="btn-finalizar"><button>FINALIZAR</button></div>
+        <div id="btn-subir"><button>SUBIR GIF</button></div>
+        
+        
 
-                <img class="slider" id="right" src="assets/Button-Slider-right.svg" alt="slider right button">
-              
-            </div>
-            
-        </section>
+
+
 
     </main>
+
 
     <footer>
         
         <ul>
-            <li><P class="share">Compartir en:</P></li>
+            <li><P class="share text">Compartir en:</P></li>
             <li><a href="https://www.facebook.com/" target="_blank"><img src="assets/icon_facebook.svg" alt="facebook icon"></a></li>
             <li><a href="https://www.twitter.com/" target="_blank"><img src="assets/icon-twitter.svg" alt="twitter icon"></a></li>
             <li><a href="https://www.instagram.com/" target="_blank"><img src="assets/icon_instagram.svg" alt="instagram icon"></a></li>
-            <li><p class="copyright">©️GIFOS 2020 All Rights Reserved.</p></li>
+            
         </ul>
+        <li><p class="copyright text">©️GIFOS 2020 All Rights Reserved.</p></li>
         
     </footer>
 
 
-    <script src="js/index.js"></script>
+
+    <script src="js/test.js"></script>
 </body>
-</html>

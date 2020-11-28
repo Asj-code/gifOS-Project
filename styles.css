@@ -64,9 +64,6 @@ header {
   cursor: pointer;
   border-bottom: 2px solid #50E3C2;
 }
-.menu a:active {
-  color: rgba(6, 10, 36, 0.56);
-}
 @media screen and (min-width: 1220px) {
   .menu a {
     display: inline-block;
@@ -75,6 +72,11 @@ header {
   }
 }
 
+@media screen and (min-width: 1220px) {
+  .menu a.active {
+    color: gray;
+  }
+}
 .bars {
   display: block;
   width: 25px;
@@ -141,14 +143,8 @@ header {
 .btn-gifos {
   display: none;
   cursor: pointer;
-  border: none;
-  border-radius: 50%;
-  background-color: #FFFFFF;
   width: 40px;
   margin-top: 10px;
-  /*&:hover {
-
-  }*/
 }
 @media screen and (min-width: 1220px) {
   .btn-gifos {
@@ -282,12 +278,13 @@ h1 span {
   display: none;
 }
 
-#gifs-container {
+#main-gifs-container {
   display: flex;
 }
 
 #gif {
-  width: 200px;
+  width: 300px;
+  height: 200px;
   margin: 10px;
 }
 
@@ -296,29 +293,10 @@ h1 span {
     display: flex;
     justify-content: space-between;
   }
-  .main-trendign-container iframe {
-    margin: 0 10px;
-  }
 
   .slider {
     padding: 0 30px;
     display: block;
-  }
-
-  #main-gifs-container {
-    display: flex;
-  }
-
-  #gif {
-    width: 300px;
-    height: 200px;
-    margin: 10px;
-  }
-
-  .gif-img {
-    width: 300px;
-    height: 250px;
-    margin: 0 5px;
   }
 }
 footer {
@@ -369,9 +347,13 @@ footer li a img {
   display: flex;
   justify-content: center;
 }
-.fav-icons img {
-  height: 100%;
-  margin-bottom: 10px;
+
+.fav-btn {
+  border: none;
+  background-color: transparent;
+  outline: transparent;
+  cursor: pointer;
+  margin-top: 100px;
 }
 
 .fav-images {
@@ -388,11 +370,103 @@ footer li a img {
   width: 125px;
 }
 
+#crear-gifo {
+  display: flex;
+  margin-top: 50px;
+  justify-content: space-around;
+  padding: 0 150px;
+}
+
+.create-card-container {
+  width: 700px;
+  height: 400px;
+  border: 1px solid #572EE5;
+  padding: 100px 0;
+}
+
+.camara-img {
+  margin-top: 80px;
+  margin-right: 40px;
+}
+
+.pelicula-img {
+  margin-top: 350px;
+  margin-left: 100px;
+}
+
+#create-title {
+  font-size: 25px;
+  padding: 0;
+}
+
+#create-paragraph {
+  text-align: center;
+  color: black;
+}
+
+.line {
+  width: 800px;
+  height: 8px;
+  background-color: #572EE5;
+  border-radius: 10px;
+  margin-left: 270px;
+  margin-top: 20px;
+}
+
+#btn-comenzar {
+  width: 200px;
+  height: 50px;
+  border: 1px solid #572EE5;
+  border-radius: 50px;
+  margin-top: 20px;
+  margin-left: 600px;
+  text-align: center;
+  padding-top: 15px;
+}
+#btn-comenzar button {
+  background-color: transparent;
+  border: none;
+  color: #572EE5;
+  font-size: 13px;
+  outline: none;
+  cursor: pointer;
+}
+
+#numbers {
+  display: flex;
+  justify-content: center;
+}
+#numbers div {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #572EE5;
+  margin-right: 10px;
+  border-radius: 50px;
+  padding-top: 5px;
+  text-align: center;
+}
+
+#btn-grabar {
+  display: none;
+}
+
+#btn-finalizar {
+  display: none;
+}
+
+#btn-subir {
+  display: none;
+}
+
+#btn-si {
+  display: none;
+}
+
 /* Dark Mode */
 body.dark {
   background-color: #37383C;
-  border-top: #FFFFFF 5px solid;
-  border-bottom: #FFFFFF 5px solid;
+  border-top: #000000 5px solid;
+  border-bottom: #000000 5px solid;
 }
 
 body.dark footer {

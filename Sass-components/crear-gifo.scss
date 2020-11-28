@@ -1,0 +1,95 @@
+
+#crear-gifo {
+    display: flex;
+    margin-top: 50px;
+    justify-content: space-around;
+    padding: 0 150px;
+}
+
+.create-card-container {
+    width: 700px;
+    height: 400px;
+    border: 1px solid $base-color-light;
+    padding: 100px 0;
+}
+
+.camara-img {
+    margin-top: 80px;
+    margin-right: 40px;
+}
+
+
+.pelicula-img {
+    margin-top: 350px;
+    margin-left: 100px;
+}
+
+#create-title {
+    font-size: 25px;
+    padding: 0;
+    
+}
+
+#create-paragraph {
+    text-align: center;
+    color: black;
+}
+
+.line {
+    width: 800px;
+    height: 8px;
+    background-color: $base-color-light;
+    border-radius: 10px;
+    margin-left: 270px;
+    margin-top: 20px;
+}
+
+#btn-comenzar {
+    width: 200px;
+    height: 50px;
+    border: 1px solid $base-color-light;
+    border-radius: 50px;
+    margin-top: 20px;
+    margin-left: 600px;
+    text-align: center;
+    padding-top: 15px;
+    
+    button {
+        background-color: transparent;
+        border: none;
+        color: $base-color-light;
+        font-size: 13px;
+        outline: none;
+        cursor: pointer;
+    }
+}
+
+#numbers {
+    display: flex;
+    justify-content: center;
+    div {
+        width: 30px;
+        height: 30px;
+        border: 1px solid $base-color-light;
+        margin-right: 10px;
+        border-radius: 50px;
+        padding-top: 5px;
+        text-align: center;
+    }
+}
+
+#btn-grabar {
+    display: none;
+}
+
+#btn-finalizar {
+    display: none;
+}
+
+#btn-subir {
+    display: none;
+}
+
+#btn-si {
+    display: none;
+}

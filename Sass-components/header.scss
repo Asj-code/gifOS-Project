@@ -61,15 +61,19 @@ header {
             cursor: pointer;
             border-bottom: 2px solid $special-color;  
         }
-        &:active{
-            color: rgba(6,10,36,0.56);
-        }
         @media screen and (min-width: 1220px){
             display: inline-block;
             color: $base-color-light;
             padding: 0;
         }
 }
+}
+
+@media screen and (min-width: 1220px) {
+    .menu a.active{
+        color: gray;
+       
+    }
 }
 
 .bars{
@@ -134,14 +138,8 @@ position: absolute;
 .btn-gifos {
     display: none;
     cursor: pointer;
-    border: none;
-    border-radius: 50%;
-    background-color: $bg-color-light;
     width: 40px;
     margin-top: 10px;
-    /*&:hover {
-
-    }*/
     @media screen and (min-width: 1220px) {
         display: block;
     }

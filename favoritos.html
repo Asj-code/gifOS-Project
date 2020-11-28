@@ -13,7 +13,8 @@
 <body>
     <header>
         <div class="navbar">
-            <img class="logo" src="assets/logo-mobile.svg" alt="logo web image">
+            <a href="index.html"><img id="logo" class="logo" src="assets/logo-mobile.svg" alt="logo web image"></a>
+            
             <nav class="menu">
                 <input class="button" type="checkbox" id="checkbox" />
                 <span class="bars"></span>
@@ -21,13 +22,16 @@
                 <span class="bars"></span>
                 <ul>
                     <li>
-                        <a href="#modonocturno">Modo nocturno</a></li>
+                        <a class="text" href="index.html">Index</a></li>
                     <li>
-                        <a href="favoritos">Favoritos</a></li>
                     <li>
-                        <a href="misgifos">Mis GIFOS</a></li>
+                        <a class="text" id="change-mode">Modo nocturno</a></li>
+                    <li>
+                        <a class="text active" href="#">Favoritos</a></li>
+                    <li>
+                        <a class="text" href="misgifos.html">Mis GIFOS</a></li>
                         <li>
-                            <img class="btn-gifos" src="assets/button-crear-gifo.svg" alt="Botón para crear gifos">
+                            <a href="crear-gifo.html"><img id="btn-gifos" class="btn-gifos" src="assets/button-crear-gifo.svg" alt="create gifs button"></a>
                         </li>
                 </ul>
                 
@@ -37,36 +41,46 @@
     </header>
 
 
+
+
     <main>
         <section id="home" class="favoritos">
             <div class="fav-icons"><img src="assets/icon-favoritos.svg" alt="heart icon"></div>
             
             <h1>Favoritos</h1>
 
-            <div class="fav-images">
-                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="">
-                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="">
-                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="">
-                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="">
-            </div>
+            <div class="fav-icons"><img src="assets/icon-fav-sin-contenido.svg" alt=""></div>
 
-            <div  class="fav-icons"><img src="assets/CTA-ver-mas.svg" alt="see more button"></div>
+            
+
+            <div class="fav-icons">
+                <button class="fav-btn"><img src="assets/CTA-ver-mas.svg" alt="see more button"></button>
+            </div>
+            
+            
             
         </section>
 
         <section id="trending">
 
             <div class="trending-text">
-                <h2>Trending GIFOS</h2>
-                <p>Mirá los últimos GIFOS de nuestra comunidad.</p>
+                <h2 class="text">Trending GIFOS</h2>
+                <p class="text">Mirá los últimos GIFOS de nuestra comunidad.</p>
             </div>
 
-            <div class="trending-cards">
-                <img class="slider" src="assets/button-slider-left.svg" alt="slider left button">
-                <img src="https://images.unsplash.com/photo-1521651201144-634f700b36ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="gif one">
-                <img src="https://images.unsplash.com/photo-1521651201144-634f700b36ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="gif two">
-                <img src="https://images.unsplash.com/photo-1521651201144-634f700b36ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="gif three">
-                <img class="slider" src="assets/Button-Slider-right.svg" alt="slider right button">
+            <div class="main-trendign-container">
+            
+                    <img class="slider" id="left" src="assets/button-slider-left.svg" alt="slider left button">
+               
+                <div id="main-gifs-container">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <!-- Imágenes creadas con javascript -->
+                </div>
+
+                <img class="slider" id="right" src="assets/Button-Slider-right.svg" alt="slider right button">
+              
             </div>
             
         </section>
@@ -88,12 +102,6 @@
         
     </footer>
 
-
-
-
-
-
-
-    <script src="index.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>
