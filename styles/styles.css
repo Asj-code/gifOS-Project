@@ -133,11 +133,6 @@ header {
 .button:checked ~ span:nth-last-child(2) {
   transform: rotate(-45deg) translate(1px, 0px);
 }
-@media screen and (min-width: 1220px) {
-  .button {
-    display: none;
-  }
-}
 
 /* Gifos create button */
 .btn-gifos {
@@ -212,7 +207,9 @@ h1 span {
 
 .grid-fluid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 50px;
+  padding: 0 50px;
 }
 
 .loader {

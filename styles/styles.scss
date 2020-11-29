@@ -1,0 +1,19 @@
+/* Google Fonts Link */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto&display=swap');
+
+/* Components */
+@import 'styles/navigation_bar';
+@import 'styles/general';
+@import 'styles/home';
+@import 'styles/search_bar';
+@import 'styles/trending';
+@import 'styles/variables';
+@import 'styles/footer';
+
+/* Pages */
+@import 'styles/favorites-my_gifos';
+@import 'styles/misgifos';
+@import 'styles/create_gifo';
+
+/* Dark Mode */
+@import 'styles/dark-mode';

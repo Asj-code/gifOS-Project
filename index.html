@@ -3,73 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>gifOS</title>
     <!-- Styles Sheet Link -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/styles.css">
     <!-- Font Awesome Link -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.0/css/all.css" integrity="sha384-OLYO0LymqQ+uHXELyx93kblK5YIS3B2ZfLGBmsJaUyor7CpMTBsahDHByqSuWW+q" crossorigin="anonymous">
+    <title>gifOS</title>
 </head>
 
 <body>
-
-
-    <header>
-        <div class="navbar">
-            <a href="index.html"><img id="logo" class="logo" src="assets/logo-mobile.svg" alt="logo web image"></a>
-            <nav class="menu">
-                <input class="button" type="checkbox" id="checkbox" />
-                <span class="bars"></span>
-                <span class="bars"></span>
-                <span class="bars"></span>
-                <ul>
-                    <li>
-                        <a class="text" id="change-mode">Modo nocturno</a></li>
-                    <li>
-                        <a class="text" href="favoritos.html">Favoritos</a></li>
-                    <li>
-                        <a class="text" href="misgifos.html">Mis GIFOS</a></li>
-                        <li>
-                            <a href="crear-gifo.html"><img id="btn-gifos" class="btn-gifos" src="assets/button-crear-gifo.svg" alt="create gifs button"></a>
-                        </li>
-                </ul>
-                
-            </nav>   
-            
-        </div>
+    <header class="header">
+        <nav class="navigation-bar">
+            <input class="navigation-bar__checkbox-menu" type="checkbox" name="checkbox-menu" id="checkbox-menu">
+            <i class="icon-burger"></i>
+            <i class="icon-close"></i>
+            <a class="home-link" href="#"><img class="navigation-bar__logo" src="./assets/logo-mobile.svg" alt="Logo página de GifOS"></a>
+            <ul class="navigation-bar__menu">
+                <li><a href="#" class="menu-item dark-mode">Modo Nocturno</a></li>
+                <li><a href="#" class="menu-item day-mode hidden">Modo Diurno</a></li>
+                <li><a href="./favorites.html" class="menu-item">Favoritos</a></li>
+                <li><a href="./my_gifs.html" class="menu-item">Mis GIFOS</a></li>
+            </ul>
+            <a class="navigation-bar__button" href="./create_gifos.html"><i class="icon-button-crear-gifo"></i></a>
+        </nav>
     </header>
-
-
-
-
 
     <main>
         <section id="home">
             <h1 class="text" >Inspírate, busca, guarda y crea los mejores <span>GIFOS</span></h1>
 
            <div class="main-image">
-                <img src="assets/ilustra_header.svg" alt="group of people huging each other">
+                <img src="assets/home-image.svg" alt="group of people hugging each other">
             </div>
-
 
             <div id="input-ctn">
                 <input type="search" id="search" placeholder="Search a GIF...">
             </div>
             
+        <section id="gif-section" class="grid-fluid">
+            <template id="gif-template">
+                <div id="gifs">
+                    <img id="search-gif">
+                    <h3 id="gif-title"></h3>
+                    <p id="gif-user"></p>
+                </div>
+            </template>
+        </section>
 
-            <section id="gif-section" class="grid-fluid">
-                <template id="gif-template">
-                    <div class="show">
-                        <img id="search-gif">
-                        <h3 id="gif-title"></h3>
-                        <p id="gif-user"></p>
-                    </div>
-                </template>
-            </section>
-
-            <div class="main-text">
-                <p class="text" >Trending:</p>
-                <p class="text" >Reactions, Entertainment, Sports, Stickers, Artists</p>
-            </div>
+        <div class="main-text">
+            <p class="text" >Trending:</p>
+            <p class="text" >Reactions, Entertainment, Sports, Stickers, Artists</p>
+        </div>
         </section>
 
         <section id="trending">
@@ -81,7 +64,7 @@
 
             <div class="main-trendign-container">
             
-                    <img class="slider" id="left" src="assets/button-slider-left.svg" alt="slider left button">
+                    <img class="slider" id="left" src="assets/slider-left-btn.svg" alt="slide gifos to the left button">
                
                 <div id="main-gifs-container">
                     <div></div>
@@ -90,7 +73,7 @@
                     <!-- Imágenes creadas con javascript -->
                 </div>
 
-                <img class="slider" id="right" src="assets/Button-Slider-right.svg" alt="slider right button">
+                <img class="slider" id="right" src="assets/slider-right-btn.svg" alt="slide gifos to the right button">
               
             </div>
             
@@ -102,9 +85,9 @@
         
         <ul>
             <li><P class="share text">Compartir en:</P></li>
-            <li><a href="https://www.facebook.com/" target="_blank"><img src="assets/icon_facebook.svg" alt="facebook icon"></a></li>
-            <li><a href="https://www.twitter.com/" target="_blank"><img src="assets/icon-twitter.svg" alt="twitter icon"></a></li>
-            <li><a href="https://www.instagram.com/" target="_blank"><img src="assets/icon_instagram.svg" alt="instagram icon"></a></li>
+            <li><a href="https://www.facebook.com/" target="_blank"><img src="assets/facebook-icon.svg" alt="facebook icon"></a></li>
+            <li><a href="https://www.twitter.com/" target="_blank"><img src="assets/twitter-icon.svg" alt="twitter icon"></a></li>
+            <li><a href="https://www.instagram.com/" target="_blank"><img src="assets/instagram-icon.svg" alt="instagram icon"></a></li>
             
         </ul>
         <li><p class="copyright text">©️GIFOS 2020 All Rights Reserved.</p></li>
@@ -113,6 +96,6 @@
 
 
 
-    <script src="js/index.js"></script>
+    <script src="scripts/index.js"></script>
 </body>
 </html>
