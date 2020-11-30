@@ -1,23 +1,46 @@
 /* Google Fonts Link */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto&display=swap");
 /* Components */
+/* Hamburguer Menu */
 header {
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
   font-size: 13px;
   line-height: 16px;
   color: #572EE5;
-  padding: 10px 30px 0;
+  padding: 30px 30px 0;
 }
 
-/* Hamburguer Menu */
+.navbar-logo-desktop {
+  display: none;
+}
+@media screen and (min-width: 1220px) {
+  .navbar-logo-desktop .navbar-logo-mobile {
+    display: none;
+  }
+  .navbar-logo-desktop .navbar-logo-desktop {
+    display: block;
+  }
+}
+
+.create-gifo-btn {
+  display: none;
+}
+@media screen and (min-width: 1220px) {
+  .create-gifo-btn {
+    display: block;
+    cursor: pointer;
+  }
+}
+
 .menu {
   float: right;
+  margin-top: 10px;
 }
 .menu ul {
   width: 100%;
   position: absolute;
-  top: 70px;
+  top: 100px;
   left: 5px;
   overflow: hidden;
   list-style: none;
@@ -34,6 +57,8 @@ header {
     display: flex;
     flex-flow: row;
     justify-content: flex-end;
+    margin-top: 30px;
+    padding: 0px 40px 0 30px;
   }
 }
 .menu li {
@@ -51,63 +76,38 @@ header {
     margin: 0;
   }
 }
-.menu a {
-  position: relative;
+
+.menu-item {
   text-decoration: none;
   color: #FFFFFF;
-  padding: 16px 0;
   line-height: 28px;
-  display: block;
   font-size: 16px;
 }
-.menu a:hover {
-  cursor: pointer;
-  border-bottom: 2px solid #50E3C2;
-}
 @media screen and (min-width: 1220px) {
-  .menu a {
-    display: inline-block;
+  .menu-item {
     color: #572EE5;
-    padding: 0;
+  }
+  .menu-item:hover {
+    cursor: pointer;
+    border-bottom: 2px solid #50E3C2;
   }
 }
 
-@media screen and (min-width: 1220px) {
-  .menu a.active {
-    color: gray;
-  }
+.active {
+  color: gray;
 }
-.bars {
+
+.hamburger-menu {
   display: block;
-  width: 25px;
-  height: 2px;
-  margin-bottom: 6.5px;
-  margin-right: 10px;
-  position: relative;
-  background: #572EE5;
-  z-index: 1;
-  transform-origin: 3px 0px;
-  transition: transform 0.5s ease, opacity 0.55s ease;
-}
-.bars:first-child {
-  transform-origin: 0% 0%;
-}
-.bars:nth-last-child(2) {
-  transform-origin: 0% 100%;
 }
 @media screen and (min-width: 1220px) {
-  .bars {
+  .hamburger-menu {
     display: none;
-  }
-}
-@media screen and (min-width: 768px) {
-  .bars {
-    margin-right: 20px;
   }
 }
 
 /* Input type:checkbox style */
-.button {
+.input-check-btn {
   display: block;
   width: 40px;
   height: 32px;
@@ -115,36 +115,12 @@ header {
   z-index: 2;
   position: absolute;
 }
-.button:hover {
+.input-check-btn:hover {
   cursor: pointer;
 }
-.button:checked ~ ul {
+.input-check-btn:checked ~ ul {
   height: 100%;
   transition: height 0.5s ease-in-out;
-}
-.button:checked ~ span {
-  opacity: 1;
-  transform: rotate(45deg) translate(2px, 1px);
-}
-.button:checked ~ span:nth-last-child(3) {
-  opacity: 0;
-  transform: rotate(0deg) scale(0.2, 0.2);
-}
-.button:checked ~ span:nth-last-child(2) {
-  transform: rotate(-45deg) translate(1px, 0px);
-}
-
-/* Gifos create button */
-.btn-gifos {
-  display: none;
-  cursor: pointer;
-  width: 40px;
-  margin-top: 10px;
-}
-@media screen and (min-width: 1220px) {
-  .btn-gifos {
-    display: block;
-  }
 }
 
 * {
@@ -298,10 +274,17 @@ h1 span {
 }
 footer {
   width: 100%;
-  height: 116px;
+  height: 180px;
   background-color: #FFFFFF;
   padding: 50px 40px;
   text-align: center;
+  display: flex;
+  justify-content: space-around;
+}
+@media screen and (min-width: 1220px) {
+  footer {
+    justify-content: space-between;
+  }
 }
 footer P {
   font-family: "Roboto", sans-serif;
@@ -311,26 +294,20 @@ footer P {
   letter-spacing: 0;
   text-align: center;
   margin-bottom: 20px;
-  padding-right: 20px;
-}
-
-footer {
-  display: flex;
-  justify-content: space-between;
 }
 @media screen and (min-width: 1220px) {
   footer ul {
     display: flex;
   }
 }
-footer li {
+footer ul li {
   display: inline;
 }
-footer li a {
+footer ul li a {
   color: #CDD6E0;
   padding-right: 30px;
 }
-footer li a img {
+footer ul li a img {
   width: 20px;
   height: 20px;
 }
@@ -367,96 +344,17 @@ footer li a img {
   width: 125px;
 }
 
-#crear-gifo {
-  display: flex;
-  margin-top: 50px;
-  justify-content: space-around;
-  padding: 0 150px;
-}
-
-.create-card-container {
-  width: 700px;
-  height: 400px;
-  border: 1px solid #572EE5;
-  padding: 100px 0;
-}
-
-.camara-img {
-  margin-top: 80px;
-  margin-right: 40px;
-}
-
-.pelicula-img {
-  margin-top: 350px;
-  margin-left: 100px;
-}
-
-#create-title {
-  font-size: 25px;
-  padding: 0;
-}
-
-#create-paragraph {
-  text-align: center;
-  color: black;
-}
-
-.line {
-  width: 800px;
-  height: 8px;
-  background-color: #572EE5;
-  border-radius: 10px;
-  margin-left: 270px;
-  margin-top: 20px;
-}
-
-#btn-comenzar {
-  width: 200px;
-  height: 50px;
-  border: 1px solid #572EE5;
-  border-radius: 50px;
-  margin-top: 20px;
-  margin-left: 600px;
-  text-align: center;
-  padding-top: 15px;
-}
-#btn-comenzar button {
-  background-color: transparent;
-  border: none;
-  color: #572EE5;
-  font-size: 13px;
-  outline: none;
+/* Gifos create button */
+.btn-gifos {
+  display: none;
   cursor: pointer;
+  width: 40px;
+  margin-top: 10px;
 }
-
-#numbers {
-  display: flex;
-  justify-content: center;
-}
-#numbers div {
-  width: 30px;
-  height: 30px;
-  border: 1px solid #572EE5;
-  margin-right: 10px;
-  border-radius: 50px;
-  padding-top: 5px;
-  text-align: center;
-}
-
-#btn-grabar {
-  display: none;
-}
-
-#btn-finalizar {
-  display: none;
-}
-
-#btn-subir {
-  display: none;
-}
-
-#btn-si {
-  display: none;
+@media screen and (min-width: 1220px) {
+  .btn-gifos {
+    display: block;
+  }
 }
 
 /* Dark Mode */

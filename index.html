@@ -12,18 +12,18 @@
 
 <body>
     <header class="header">
-        <nav class="navigation-bar">
-            <input class="navigation-bar__checkbox-menu" type="checkbox" name="checkbox-menu" id="checkbox-menu">
-            <i class="icon-burger"></i>
-            <i class="icon-close"></i>
-            <a class="home-link" href="#"><img class="navigation-bar__logo" src="./assets/logo-mobile.svg" alt="Logo página de GifOS"></a>
-            <ul class="navigation-bar__menu">
+        <a href="#"><img class="navbar-logo-desktop" src="./assets/logo-desktop.svg" alt="GifOS page logo"></a>
+        <a href="#"><img class="navbar-logo-mobile" src="./assets/logo-mobile.svg" alt="GifOS page logo"></a>
+        <nav class="menu">
+            <input class="input-check-btn" type="checkbox" name="checkbox-menu">
+            <img src="assets/hamburger-menu.svg" alt="colapse menu icon" class="hamburger-menu">
+            <ul>
                 <li><a href="#" class="menu-item dark-mode">Modo Nocturno</a></li>
-                <li><a href="#" class="menu-item day-mode hidden">Modo Diurno</a></li>
+                <!-- <li><a href="#" class="menu-item day-mode hidden">Modo Diurno</a></li> -->
                 <li><a href="./favorites.html" class="menu-item">Favoritos</a></li>
-                <li><a href="./my_gifs.html" class="menu-item">Mis GIFOS</a></li>
+                <li><a href="./my_gifos.html" class="menu-item">Mis GIFOS</a></li>
+                <a href="./create_gifo.html"><img id="create-gif" class="create-gifo-btn" src="./assets/create-gifo-btn.svg" alt="create gifo button"></a>
             </ul>
-            <a class="navigation-bar__button" href="./create_gifos.html"><i class="icon-button-crear-gifo"></i></a>
         </nav>
     </header>
 
@@ -64,7 +64,7 @@
 
             <div class="main-trendign-container">
             
-                    <img class="slider" id="left" src="assets/slider-left-btn.svg" alt="slide gifos to the left button">
+                    <img class="slider" id="left" src="/assets/slider-left-btn.svg" alt="slide gifos to the left button">
                
                 <div id="main-gifs-container">
                     <div></div>
@@ -88,14 +88,18 @@
             <li><a href="https://www.facebook.com/" target="_blank"><img src="assets/facebook-icon.svg" alt="facebook icon"></a></li>
             <li><a href="https://www.twitter.com/" target="_blank"><img src="assets/twitter-icon.svg" alt="twitter icon"></a></li>
             <li><a href="https://www.instagram.com/" target="_blank"><img src="assets/instagram-icon.svg" alt="instagram icon"></a></li>
-            
+            <li><p class="copyright text">©️GIFOS 2020 All Rights Reserved.</p></li>
         </ul>
-        <li><p class="copyright text">©️GIFOS 2020 All Rights Reserved.</p></li>
+
         
     </footer>
 
-
-
-    <script src="scripts/index.js"></script>
+    <script src="scripts/get_api.js"></script>
+    <script src="scripts/slider-btns.js"></script>
+    <script src="scripts/create_gifo_btn.js"></script> 
+    <script src="scripts/search_bar.js"></script>
+    <script src="scripts/trending_carrousel.js" type="module"></script> 
+    
+    
 </body>
 </html>

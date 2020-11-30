@@ -5,42 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>gifOS</title>
     <!-- Styles Sheet Link -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/styles.css">
     <!-- Font Awesome Link -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.0/css/all.css" integrity="sha384-OLYO0LymqQ+uHXELyx93kblK5YIS3B2ZfLGBmsJaUyor7CpMTBsahDHByqSuWW+q" crossorigin="anonymous">
 </head>
 
 <body>
-    <header>
-        <div class="navbar">
-            <a href="index.html"><img id="logo" class="logo" src="assets/logo-mobile.svg" alt="go to the main page image"></a>
-            <a href="index.html"><img id="logo" class="logo" src="assets/logo-desktop.svg" alt="go to the main page image" styles="hidden"></a>
+    <header class="header">
+        <a href="index.html"><img class="navbar-logo-desktop" src="./assets/logo-desktop.svg" alt="GifOS page logo"></a>
+        <a href="index.html"><img class="navbar-logo-mobile" src="./assets/logo-mobile.svg" alt="GifOS page logo"></a>
+        <nav class="menu">
+            <input class="input-check-btn" type="checkbox" name="checkbox-menu">
+            <img src="assets/hamburger-menu.svg" alt="colapse menu icon" class="hamburger-menu">
+            <ul>
+                <li><a href="#" class="menu-item dark-mode">Modo Nocturno</a></li>
+                <!-- <li><a href="#" class="menu-item day-mode hidden">Modo Diurno</a></li> -->
+                <li><a href="#" class="menu-item active">Favoritos</a></li>
+                <li><a href="./my_gifos.html" class="menu-item">Mis GIFOS</a></li>
+                <li><a href="./create_gifos.html"><img src="assets/create-gifo-btn" alt=""></a></li>
+                <a href="./create_gifo.html"><img id="create-gif" class="create-gifo-btn" src="./assets/create-gifo-btn.svg" alt="create gifo button"></a>
+            </ul>
             
-            <nav class="menu">
-                <input class="button" type="checkbox" id="checkbox" />
-                <span class="bars"></span>
-                <span class="bars"></span>
-                <span class="bars"></span>
-                <ul>
-                    <li>
-                        <a class="text" href="index.html">Index</a></li>
-                    <li>
-                    <li>
-                        <a class="text" id="change-mode">Modo nocturno</a></li>
-                    <li>
-                        <a class="text active" href="#">Favoritos</a></li>
-                    <li>
-                        <a class="text" href="my_gifos.html">Mis GIFOS</a></li>
-                        <li>
-                            <a href="create_gifo.html"><img id="btn-gifos" class="btn-gifos" src="assets/create-gifo-btn.svg" alt="create gifo button"></a>
-                        </li>
-                </ul>
-                
-            </nav>   
-            
-        </div>
+        </nav>
     </header>
-
 
 
 
@@ -103,6 +90,9 @@
         
     </footer>
 
-    <script src="scripts/index.js"></script>
+    <script src="scripts/slider-btns.js"></script>
+    <script src="scripts/create_gifo_btn.js"></script>
+    <script src="scripts/trending_carrousel.js" type="module"></script>
+    <script src="scripts/search_bar.js"></script>
 </body>
 </html>

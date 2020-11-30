@@ -2,18 +2,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto&display=swap');
 
 /* Components */
-@import 'styles/navigation_bar';
-@import 'styles/general';
-@import 'styles/home';
-@import 'styles/search_bar';
-@import 'styles/trending';
-@import 'styles/variables';
-@import 'styles/footer';
+@import 'navigation_bar';
+@import 'general';
+@import 'home';
+@import 'search_bar';
+@import 'trending';
+@import 'variables';
+@import 'footer';
 
 /* Pages */
-@import 'styles/favorites-my_gifos';
-@import 'styles/misgifos';
-@import 'styles/create_gifo';
+@import 'favorites-my_gifos';
+@import 'create_gifo';
 
 /* Dark Mode */
-@import 'styles/dark-mode';
+@import 'dark-mode';
