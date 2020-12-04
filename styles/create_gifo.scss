@@ -9,33 +9,60 @@
     }
 }
 
-@media screen and (min-width: 1220px) {
-    
-
-
-
-
-
+#main-gifo {
+    display: none;
+    @media screen and (min-width: 1220px){
+        display: block;
+    }
 }
 
+@media screen and (min-width: 1220px) {
+    #crear-gifo {
+        width: 85%;
+        height: 500px;
+        display: flex;
+        margin: auto;
+    }
 
+    .content-gifo-camera {
+        display: flex;
+        width: 70%;
+        border: 1px solid blue;
+        text-align: center;
+        margin: auto;
+        p {
+            color: black;
+            margin-top: 20px;
+            line-height: 30px;
+        }
+    }
 
+    #videoWidget{
+        margin: 40px
+    }
 
+    #create-title {
+        padding: 0;
+    }
 
+    .camera-img {
+        margin-top: 200px;
+    }
 
+    .camera-light {
+        margin-top: 220px;
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
+    .pelicula-img {
+        margin-top: 430px;
+        margin-left: 10px;
+    }
+        
+    #numbers {
+        display: flex;
+        margin-top: 40px;
+    }
+}
 
 
 

@@ -8,7 +8,7 @@ header {
   font-size: 13px;
   line-height: 16px;
   color: #572EE5;
-  padding: 30px 30px 0;
+  padding: 30px 100px;
 }
 
 .navbar-logo-desktop {
@@ -58,7 +58,7 @@ header {
     flex-flow: row;
     justify-content: flex-end;
     margin-top: 30px;
-    padding: 0px 40px 0 30px;
+    padding: 0 110px;
   }
 }
 .menu li {
@@ -97,17 +97,37 @@ header {
   color: gray;
 }
 
-.hamburger-menu {
+.bars {
   display: block;
+  width: 25px;
+  height: 2px;
+  margin-bottom: 6.5px;
+  margin-right: 10px;
+  position: relative;
+  background: #572EE5;
+  z-index: 1;
+  transform-origin: 3px 0px;
+  transition: transform 0.5s ease, opacity 0.55s ease;
+}
+.bars:first-child {
+  transform-origin: 0% 0%;
+}
+.bars:nth-last-child(2) {
+  transform-origin: 0% 100%;
 }
 @media screen and (min-width: 1220px) {
-  .hamburger-menu {
+  .bars {
     display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .bars {
+    margin-right: 20px;
   }
 }
 
 /* Input type:checkbox style */
-.input-check-btn {
+.button {
   display: block;
   width: 40px;
   height: 32px;
@@ -115,12 +135,28 @@ header {
   z-index: 2;
   position: absolute;
 }
-.input-check-btn:hover {
+.button:hover {
   cursor: pointer;
 }
-.input-check-btn:checked ~ ul {
+.button:checked ~ ul {
   height: 100%;
   transition: height 0.5s ease-in-out;
+}
+.button:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(2px, 1px);
+}
+.button:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+.button:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(1px, 0px);
+}
+@media screen and (min-width: 1220px) {
+  .button {
+    display: none;
+  }
 }
 
 * {
@@ -142,6 +178,7 @@ main {
 #home {
   width: 100%;
   margin-top: 50px;
+  padding: 0 100px;
 }
 
 h1 {
@@ -183,9 +220,31 @@ h1 span {
 
 .grid-fluid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  margin-top: 50px;
-  padding: 0 50px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(6, 200px);
+  grid-gap: 1rem;
+}
+@media screen and (min-width: 1220px) {
+  .grid-fluid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 200px);
+    grid-gap: 1rem;
+  }
+}
+
+#gif-section {
+  width: 100%;
+}
+
+#search-gif {
+  width: 100%;
+  height: 100%;
+}
+
+#query-title {
+  text-align: center;
+  font-size: 40px;
+  margin-top: 30px;
 }
 
 .loader {
@@ -196,6 +255,14 @@ h1 span {
 #input-ctn {
   justify-content: center;
   display: flex;
+  position: relative;
+}
+
+#search-result {
+  position: absolute;
+  margin-top: 15px;
+  margin-left: 450px;
+  cursor: pointer;
 }
 
 #search {
@@ -225,10 +292,17 @@ h1 span {
   line-height: 25px;
 }
 
+@media screen and (min-width: 1220px) {
+  #ver-mas-gifos {
+    display: none;
+  }
+}
+
 #trending {
   background-color: #F3F5F8;
   width: 100%;
   height: 640px;
+  padding: 0 100px;
 }
 
 .trending-text {
@@ -253,12 +327,16 @@ h1 span {
 
 #main-gifs-container {
   display: flex;
+  overflow: hidden;
 }
 
 #gif {
   width: 300px;
   height: 200px;
   margin: 10px;
+}
+#gif:hover {
+  color: #000;
 }
 
 @media screen and (min-width: 1220px) {
@@ -272,6 +350,60 @@ h1 span {
     display: block;
   }
 }
+.modal-img {
+  height: 60%;
+}
+
+.modal-container {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  width: 40%;
+  height: 50%;
+  background-color: red;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: relative;
+  transition: transform 1s;
+  transform: translateY(0%);
+  /* -200% se va para arriba*/
+}
+
+/* la clase se agrega cuando quiero que se vaya el modal*/
+.modal-close {
+  transform: translateY(-200%);
+}
+
+.modal-img {
+  height: 50%;
+}
+
+.close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background: white;
+  line-height: 25px;
+}
+
 footer {
   width: 100%;
   height: 180px;
@@ -357,6 +489,62 @@ footer ul li a img {
   }
 }
 
+#main-gifo {
+  display: none;
+}
+@media screen and (min-width: 1220px) {
+  #main-gifo {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1220px) {
+  #crear-gifo {
+    width: 85%;
+    height: 500px;
+    display: flex;
+    margin: auto;
+  }
+
+  .content-gifo-camera {
+    display: flex;
+    width: 70%;
+    border: 1px solid blue;
+    text-align: center;
+    margin: auto;
+  }
+  .content-gifo-camera p {
+    color: black;
+    margin-top: 20px;
+    line-height: 30px;
+  }
+
+  #videoWidget {
+    margin: 40px;
+  }
+
+  #create-title {
+    padding: 0;
+  }
+
+  .camera-img {
+    margin-top: 200px;
+  }
+
+  .camera-light {
+    margin-top: 220px;
+  }
+
+  .pelicula-img {
+    margin-top: 430px;
+    margin-left: 10px;
+  }
+
+  #numbers {
+    display: flex;
+    margin-top: 40px;
+  }
+}
 /* Dark Mode */
 body.dark {
   background-color: #37383C;

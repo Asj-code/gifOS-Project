@@ -15,13 +15,15 @@
         <a href="#"><img class="navbar-logo-desktop" src="./assets/logo-desktop.svg" alt="GifOS page logo"></a>
         <a href="#"><img class="navbar-logo-mobile" src="./assets/logo-mobile.svg" alt="GifOS page logo"></a>
         <nav class="menu">
-            <input class="input-check-btn" type="checkbox" name="checkbox-menu">
-            <img src="assets/hamburger-menu.svg" alt="colapse menu icon" class="hamburger-menu">
+            <input class="button" type="checkbox" name="checkbox-menu">
+            <span class="bars"></span>
+            <span class="bars"></span>
+            <span class="bars"></span>
             <ul>
-                <li><a href="#" class="menu-item dark-mode">Modo Nocturno</a></li>
+                <li><a href="#" class="menu-item dark-mode text" id="change-mode">Modo Nocturno</a></li>
                 <!-- <li><a href="#" class="menu-item day-mode hidden">Modo Diurno</a></li> -->
-                <li><a href="./favorites.html" class="menu-item">Favoritos</a></li>
-                <li><a href="./my_gifos.html" class="menu-item">Mis GIFOS</a></li>
+                <li><a href="./favorites.html" class="menu-item text">Favoritos</a></li>
+                <li><a href="./my_gifos.html" class="menu-item text">Mis GIFOS</a></li>
                 <a href="./create_gifo.html"><img id="create-gif" class="create-gifo-btn" src="./assets/create-gifo-btn.svg" alt="create gifo button"></a>
             </ul>
         </nav>
@@ -36,10 +38,12 @@
             </div>
 
             <div id="input-ctn">
-                <input type="search" id="search" placeholder="Search a GIF...">
+                <input type="search" id="search" placeholder="Busca GIFOS y más...">
+                <div id="search-result"><img src="assets/search-icon.svg" alt="search icon to see gifos"></div>
             </div>
             
-        <section id="gif-section" class="grid-fluid">
+            
+        <section id="gif-section">
             <template id="gif-template">
                 <div id="gifs">
                     <img id="search-gif">
@@ -48,6 +52,11 @@
                 </div>
             </template>
         </section>
+
+        <div class="fav-icons" id="ver-mas-gifos">
+            <button class="fav-btn"  id="search-more-gifs" ><img src="assets/ver-mas-btn.svg"alt="see more button"></button>
+        </div>
+        
 
         <div class="main-text">
             <p class="text" >Trending:</p>
@@ -63,26 +72,30 @@
             </div>
 
             <div class="main-trendign-container">
-            
-                    <img class="slider" id="left" src="/assets/slider-left-btn.svg" alt="slide gifos to the left button">
-               
-                <div id="main-gifs-container">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <!-- Imágenes creadas con javascript -->
-                </div>
-
-                <img class="slider" id="right" src="assets/slider-right-btn.svg" alt="slide gifos to the right button">
-              
+                <img class="slider" id="left" src="/assets/slider-left-btn.svg" alt="slide gifos to the left button">
+            <div id="main-gifs-container">
+                <div></div>
+                <div></div>
+                <div></div>
+            <!-- Imágenes creadas con javascript -->
             </div>
-            
+                <img class="slider" id="right" src="assets/slider-right-btn.svg" alt="slide gifos to the right button">  
+            </div>
         </section>
 
+        <button class="cta">Abrir modal</button>
+        <section id="ventana-modal">
+            <div class="modal-container">
+                <div class="modal modal-close">
+                    <p class="close">X</p>
+                    <img class="modal-img" src="/assets/home-image.svg" alt="">
+                </div>
+            </div>
+
+        </section>
     </main>
 
     <footer>
-        
         <ul>
             <li><P class="share text">Compartir en:</P></li>
             <li><a href="https://www.facebook.com/" target="_blank"><img src="assets/facebook-icon.svg" alt="facebook icon"></a></li>
@@ -90,16 +103,20 @@
             <li><a href="https://www.instagram.com/" target="_blank"><img src="assets/instagram-icon.svg" alt="instagram icon"></a></li>
             <li><p class="copyright text">©️GIFOS 2020 All Rights Reserved.</p></li>
         </ul>
-
         
     </footer>
 
+    <script src="scripts/trending_carrousel.js" type="module"></script> 
+    <script src="scripts/main_functions.js"></script>
+    <script src="scripts/dark_mode.js"></script>
     <script src="scripts/get_api.js"></script>
     <script src="scripts/slider-btns.js"></script>
     <script src="scripts/create_gifo_btn.js"></script> 
     <script src="scripts/search_bar.js"></script>
-    <script src="scripts/trending_carrousel.js" type="module"></script> 
-    
+
     
 </body>
 </html>
+
+
+

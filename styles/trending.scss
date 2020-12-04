@@ -4,6 +4,7 @@
     background-color: $trending-bg-color;
     width: 100%;
     height: 640px;
+    padding: 0 100px;
 }
 
 .trending-text {
@@ -23,17 +24,67 @@
 
 /* Gifos section */
 
+// .slider {
+//     display: none;
+// }
+
+
+
+// #main-gifs-container {
+//     display: flex;
+//     border: 1px solid red;
+//     /* width: 100%; */
+//     height: 400px;
+//     align-items: center;
+
+
+// }
+
+// #gif {
+//     width: 400px;
+//     height: 250px;
+//     margin: 10px;
+//     position: relative;
+//     z-index: -2;
+
+// } 
+
+
+// .gif-img {
+//     transition: transform 5s;
+//     transform: translateX(-50%);
+// }
+
+// @media screen and (min-width: 1220px) {
+
+//     .main-trending-container {
+//         display: flex;
+
+//         height: 400px;
+//         align-items: center;
+//         overflow: hidden;
+//     }
+//     .slider {
+//         padding: 0 30px;
+//         display: block;
+//     }
+// }
+
 .slider {
     display: none;
 }
 
 #main-gifs-container {
     display: flex;
+    overflow: hidden;
 }
 #gif {
     width: 300px;
     height: 200px;
     margin: 10px;
+    &:hover {
+        color: #000;
+    }
 } 
 
 @media screen and (min-width: 1220px) {
@@ -49,3 +100,68 @@
 }
 
 
+////modal////
+
+// #ventana-modal {
+//     height: 650px;
+//     display: flex;
+//     justify-content: space-evenly;
+//     align-items: center;
+//     padding: 0 40px;
+//     background-color: yellow;
+// }
+
+.modal-img {
+    height: 60%;
+}
+
+.modal-container {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.modal {
+    width: 40%;
+    height: 50%;
+    background-color: red;
+    // overflow: hidden;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: relative;
+    transition: transform 1s;
+    transform: translateY(0%); /* -200% se va para arriba*/
+}
+
+/* la clase se agrega cuando quiero que se vaya el modal*/
+.modal-close {
+    transform: translateY(-200%);
+}
+
+.modal-img {
+    height: 50%;
+}
+
+.close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background: white;
+    line-height: 25px;
+}

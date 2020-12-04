@@ -15,8 +15,10 @@
         <a href="index.html"><img class="navbar-logo-desktop" src="./assets/logo-desktop.svg" alt="GifOS page logo"></a>
         <a href="index.html"><img class="navbar-logo-mobile" src="./assets/logo-mobile.svg" alt="GifOS page logo"></a>
         <nav class="menu">
-            <input class="input-check-btn" type="checkbox" name="checkbox-menu">
-            <img src="assets/hamburger-menu.svg" alt="colapse menu icon" class="hamburger-menu">
+            <input class="button" type="checkbox" name="checkbox-menu">
+            <span class="bars"></span>
+            <span class="bars"></span>
+            <span class="bars"></span>
             <ul>
                 <li><a href="#" class="menu-item dark-mode">Modo Nocturno</a></li>
                 <!-- <li><a href="#" class="menu-item day-mode hidden">Modo Diurno</a></li> -->
@@ -27,45 +29,28 @@
         </nav>
     </header>
 
-    <!-- <main>
+    <main id="main-gifo">
         <section id="crear-gifo">
-            <div class="camara-img">
+            <div class="camera-img">
                 <img src="assets/camera.svg" alt="camera image">
-                
             </div>
-            <div class="create-card-container">
-                <h1 id="create-title" class="text" >Aquí podrás crear tus propios <span>GIFOS</span></h1>
-                <p class="text" id="create-paragraph">¡Crea tu GIFO en solo 3 pasos! (Sólo necesitas una cámara para grabar un video)</p>
-                
+            <div class="camera-light">
+                <img src="assets/camera-light.svg" alt="camera light image">
+            </div>
+
+            <div class="content-gifo-camera">
+                <div class="create-card-container">
+                    <h1 id="create-title" class="text" >Aquí podrás crear tus propios <span>GIFOS</span></h1>
+                    <p class="text" id="create-paragraph">¡Crea tu GIFO en solo 3 pasos! (Sólo necesitas una cámara para grabar un video)</p>   
+                    <!-- <video id="videoWidget" class="video-active"></video> -->
+                </div>
             </div>
 
             <div class="pelicula-img">
                 <img src="assets/pelicula.svg" alt="movie image">
             </div>
-
         </section>
-
-
-
-        <div id="numbers">
-            <div id="bg-numb">1</div>
-            <div id="record-num">2</div>
-            <div>3</div>
-        </div>
-        <div class="line"></div>
-        <div id="btn-comenzar"><button>COMENZAR</button></div>
-        <div id="btn-si"><button>SI</button></div>
-        <div id="btn-grabar"><button>GRABAR</button></div>
-        <div id="btn-finalizar"><button>FINALIZAR</button></div>
-        <div id="btn-subir"><button>SUBIR GIF</button></div>
-        
-        
-
-
-
-
-    </main> -->
-
+    </main>
 
     <footer>
         <ul>
@@ -77,5 +62,7 @@
         </ul>
     </footer>
 
-
+<!-- RTC Recorder CDN-->
+<!-- <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script> -->
+<!-- <script src="scripts/create_gifo_btn.js"></script>  -->
 </body>
