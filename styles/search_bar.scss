@@ -40,7 +40,6 @@
 #input-ctn {
     justify-content: center;
     display: flex;
-    position: relative;
 }
 
 #search-result {
@@ -52,7 +51,7 @@
 
 
 #search {
-    width: 250px;
+    width: 500px;
     height: 50px;
     border: 1px solid $base-color-light;
     border-radius: 27px;
@@ -79,7 +78,5 @@
 
 
 #ver-mas-gifos {
-    @media screen and (min-width: 1220px) {
-        display: none;
-    }
+    display: none;
 }

@@ -12,18 +12,18 @@
 
 <body>
     <header class="header">
-        <a href="index.html"><img class="navbar-logo-desktop" src="./assets/logo-desktop.svg" alt="GifOS page logo"></a>
-        <a href="index.html"><img class="navbar-logo-mobile" src="./assets/logo-mobile.svg" alt="GifOS page logo"></a>
+        <a href="./index.html"><img class="navbar-logo-desktop" src="./assets/logo-desktop.svg" id="logo-desktop" alt="GifOS page logo"></a>
+        <a href="./index.html"><img class="navbar-logo-mobile" src="./assets/logo-mobile.svg" id="logo-mobile" alt="GifOS page logo"></a>
         <nav class="menu">
             <input class="button" type="checkbox" name="checkbox-menu">
             <span class="bars"></span>
             <span class="bars"></span>
             <span class="bars"></span>
             <ul>
-                <li><a href="#" class="menu-item dark-mode">Modo Nocturno</a></li>
+                <li><a href="#" class="menu-item dark-mode text" id="change-mode">Modo Nocturno</a></li>
                 <!-- <li><a href="#" class="menu-item day-mode hidden">Modo Diurno</a></li> -->
-                <li><a href="./favorites.html" class="menu-item">Favoritos</a></li>
-                <li><a href="./my_gifos.html" class="menu-item">Mis GIFOS</a></li>
+                <li><a href="./favorites.html" class="menu-item text">Favoritos</a></li>
+                <li><a href="./my_gifos.html" class="menu-item text">Mis GIFOS</a></li>
                 <a href="#"><img id="create-gif" class="create-gifo-btn" src="./assets/create-gifo-btn-active.svg" alt="create gifo button"></a>
             </ul>
         </nav>
@@ -65,4 +65,11 @@
 <!-- RTC Recorder CDN-->
 <!-- <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script> -->
 <!-- <script src="scripts/create_gifo_btn.js"></script>  -->
+<!-- 
+<script src="scripts/trending_carrousel.js" type="module"></script>  -->
+    <script src="scripts/main_functions.js"></script>
+    <script src="scripts/dark_mode.js"></script>
+    <script src="scripts/get_api.js"></script>
+    <!-- <script src="scripts/slider-btns.js"></script>  -->
+    <!-- <script src="scripts/search_bar.js"></script> -->
 </body>

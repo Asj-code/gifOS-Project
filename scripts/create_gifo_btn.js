@@ -75,6 +75,11 @@ async function test(stream) {
 
 // loguear la respuesta
 
+//recueprar el id para sumarlo a la pagina de los gifs
+
+//get gif by id endpoint (en la pagina de giphy) original
+// en el local estorage guarda el id del gif para poder subirlo y quede en la pagina
+
 async function saveGif(gif) {
     const API_KEY = 'IxndpBv8XXCauGIwjs48PBQm8ZbXIwQq';
     const URL = `https://upload.giphy.com/v1/gifs?api_key=${API_KEY}`;
