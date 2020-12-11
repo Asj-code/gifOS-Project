@@ -169,7 +169,7 @@ header {
 
 * {
   margin: 0;
-  padding: 0;
+  padding: 0px;
   box-sizing: border-box;
 }
 
@@ -231,6 +231,7 @@ h1 span {
 }
 
 .grid-fluid {
+  margin-top: 100px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(6, 200px);
@@ -256,7 +257,8 @@ h1 span {
 #query-title {
   text-align: center;
   font-size: 40px;
-  margin-top: 30px;
+  margin-top: 50px;
+  margin-right: 480px;
 }
 
 .loader {
@@ -307,6 +309,10 @@ h1 span {
   display: none;
 }
 
+#close-search-btn {
+  display: none;
+}
+
 #trending {
   background-color: #F3F5F8;
   width: 100%;
@@ -334,7 +340,6 @@ h1 span {
   font-weight: 400;
 }
 
-/* Gifos section */
 .slider {
   display: none;
 }
@@ -466,6 +471,7 @@ footer ul li a img {
 .fav-icons {
   display: flex;
   justify-content: center;
+  text-align: center;
 }
 
 .fav-btn {
@@ -474,6 +480,7 @@ footer ul li a img {
   outline: transparent;
   cursor: pointer;
   margin-top: 100px;
+  text-align: center;
 }
 
 .fav-images {
@@ -515,7 +522,7 @@ footer ul li a img {
 @media screen and (min-width: 1220px) {
   #crear-gifo {
     width: 85%;
-    height: 500px;
+    height: 700px;
     display: flex;
     margin: auto;
   }
@@ -523,6 +530,7 @@ footer ul li a img {
   .content-gifo-camera {
     display: flex;
     width: 70%;
+    height: 600px;
     border: 1px solid blue;
     text-align: center;
     margin: auto;
@@ -533,8 +541,13 @@ footer ul li a img {
     line-height: 30px;
   }
 
+  .create-card-container {
+    margin: auto;
+  }
+
   #videoWidget {
-    margin: 40px;
+    margin-left: 90px;
+    display: none;
   }
 
   #create-title {
@@ -542,21 +555,69 @@ footer ul li a img {
   }
 
   .camera-img {
-    margin-top: 200px;
+    margin-top: 300px;
   }
 
   .camera-light {
-    margin-top: 220px;
+    margin-top: 320px;
   }
 
   .pelicula-img {
-    margin-top: 430px;
+    margin-top: 600px;
     margin-left: 10px;
   }
 
   #numbers {
     display: flex;
-    margin-top: 40px;
+    justify-content: center;
+    margin-left: 50px;
+    margin-bottom: 10px;
+  }
+
+  .numbers {
+    margin: 10px;
+    width: 50px;
+  }
+
+  .long-bar {
+    background-color: blue;
+    height: 10px;
+    width: 70%;
+    border-radius: 5px;
+    margin-left: 300px;
+  }
+
+  .comenzar-btn {
+    height: 70px;
+  }
+
+  #grabar-btn {
+    display: none;
+  }
+
+  #si-btn {
+    display: none;
+  }
+
+  #finalizar-btn {
+    display: none;
+  }
+
+  #subir-btn {
+    display: none;
+  }
+
+  #video-content {
+    color: #572EE5;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 30px;
+    margin-top: 700px;
+  }
+  #video-content:hover {
+    cursor: pointer;
+    text-decoration: underline #50E3C2;
   }
 }
 /* Dark Mode */

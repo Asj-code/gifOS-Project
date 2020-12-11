@@ -4,17 +4,31 @@ const d = document,
     $searchResult = d.getElementById('search-result'),
     $fragment = d.createDocumentFragment();
 let searchBtn = document.getElementById('search-icon');
+let closeSearchBtn = document.getElementById('close-search-btn');
 let input = document.getElementById('search');
 let searchMoreGifs = document.getElementById('ver-mas-gifos');
 
-var offset = 0;
-var limit = 12;
 
-searchBtn.addEventListener('click', () => {
-    let query = input.value;
-    renderGifs(query);
-    $searchResult.innerHTML = `<h2 id='query-title'>${query}</h2>`;
-});
+
+
+// input.addEventListener('keypress', (event) => {
+    
+//     let termIn = input.value;
+    
+//     if(termIn >= 65 && termIn <= 90) {
+//         console.log("es un aletra");
+//     }else {
+//         console.log("no es suna letra");
+        
+//     }
+
+//     //analizar si presiona teclas de escritura
+//     //(en caso de que si)analizar si se presionan 3 teclas o mas 
+//     //(en caso de que si) llamar a la api
+//     //convertir respuesta a json
+//     //mostrar respuestas
+// });
+
 
 
 async function renderGifs(query) {
@@ -63,4 +77,35 @@ searchMoreGifs.addEventListener('click', () => {
     limit = limit + 12;
     renderGifs(input.value);
 
+});
+
+var offset = 0;
+var limit = 12;
+
+searchBtn.addEventListener('click', () => {
+    
+    let query = input.value;
+    renderGifs(query);
+    $searchResult.innerHTML = `<h2 id='query-title'>${query}</h2>`;
+    $searchResult.setAttribute("class", "text");
+    closeSearchBtn.style.display = "block";
+
+    if(localStorage.getItem("theme-mode") == "dark"){
+        closeSearchBtn.src = "/assets/close-search-btn-dark.svg";
+    }
+});
+
+closeSearchBtn.addEventListener('click', () => {
+    $gifSection.style.display = 'none';
+    $searchResult.innerHTML = '';
+    input.value = '';
+    searchMoreGifs.style.display = 'none';
+
+    closeSearchBtn.style.display = 'none';
+    searchBtn.style.display = 'block';  //No muestra la lupa nuevamente
+    if(localStorage.getItem("theme-mode") == "dark"){
+        searchBtn.src = "/assets/search-icon-dark.svg";
+    }else {
+        searchBtn.src = "/assets/search-icon.svg";
+    }
 });

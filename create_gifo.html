@@ -39,17 +39,40 @@
             </div>
 
             <div class="content-gifo-camera">
-                <div class="create-card-container">
-                    <h1 id="create-title" class="text" >Aquí podrás crear tus propios <span>GIFOS</span></h1>
-                    <p class="text" id="create-paragraph">¡Crea tu GIFO en solo 3 pasos! (Sólo necesitas una cámara para grabar un video)</p>   
-                    <!-- <video id="videoWidget" class="video-active"></video> -->
+                <video id="videoWidget" class="video-active"></video>
+                <p id="video-content"></p>
+                
+
+                <div class="create-card-container" id="create-container"> 
+                    <div class="text-content">                  
+                        <h1 id="create-title" class="text" >Aquí podrás crear tus propios <span>GIFOS</span></h1>
+                        <p class="text" id="create-paragraph-one">¡Crea tu GIFO en solo 3 pasos!</p>
+                        <p class="text" id="create-paragraph-two">(Sólo necesitas una cámara para grabar un video)</p>
+                    </div>
                 </div>
+                
             </div>
 
             <div class="pelicula-img">
                 <img src="assets/pelicula.svg" alt="movie image">
             </div>
         </section>
+        <section id="numbers">
+            <div>
+                <img class="numbers" id="btn-1" src="/assets/paso-a-paso-btn-1.svg" alt="">
+                <img class="numbers" id="btn-2" src="/assets/paso-a-paso-btn-2.svg" alt="">
+                <img class="numbers" id="btn-3" src="/assets/paso-a-paso-btn-3.svg" alt="">
+            </div>
+        </section>
+       
+        <div  class="long-bar"></div>
+        <div class="fav-icons">
+            <button class="fav-btn" ><img id="camera-btn" src="/assets/comenzar-btn.svg" alt=""></button>
+            <button class="fav-btn grabar" ><img id="grabar-btn" src="/assets/grabar-btn.svg" alt=""></button>
+            <button class="fav-btn" ><img id="finalizar-btn" src="/assets/finalizar-btn.svg" alt=""></button>
+            <button class="fav-btn" ><img id="subir-btn" src="/assets/subir-btn.svg" alt=""></button>
+        </div>
+        
     </main>
 
     <footer>
@@ -64,12 +87,7 @@
 
 <!-- RTC Recorder CDN-->
 <!-- <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script> -->
-<!-- <script src="scripts/create_gifo_btn.js"></script>  -->
-<!-- 
-<script src="scripts/trending_carrousel.js" type="module"></script>  -->
-    <script src="scripts/main_functions.js"></script>
+<script src="scripts/create_gifo_btn.js"></script> 
+
     <script src="scripts/dark_mode.js"></script>
-    <script src="scripts/get_api.js"></script>
-    <!-- <script src="scripts/slider-btns.js"></script>  -->
-    <!-- <script src="scripts/search_bar.js"></script> -->
 </body>

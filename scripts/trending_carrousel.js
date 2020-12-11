@@ -1,18 +1,4 @@
 
-// import api from './get_api.js';
-
-// async function getTrendingGifs(offset) {
-    
-//     let url = `${api.URL}?api_key=${api.API_KEY}&limit=${api.LIMIT}&offset=${api.OFF_SET}`;
-//     let response = await fetch(url);
-//     let result = await response.json();
-//     createThreeGifCards(result);
-//     return result;
- 
-// };
-
-
-
 const api_key = 'IxndpBv8XXCauGIwjs48PBQm8ZbXIwQq';
 var offset = 0;
 

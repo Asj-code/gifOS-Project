@@ -3,6 +3,7 @@
 //// Search Bar ////
 
 .grid-fluid {
+    margin-top: 100px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(6, 200px);
@@ -28,7 +29,8 @@
 #query-title {
     text-align: center;
     font-size: 40px;
-    margin-top: 30px;
+    margin-top: 50px;
+    margin-right: 480px;
 }
 
 
@@ -78,5 +80,9 @@
 
 
 #ver-mas-gifos {
+    display: none;
+}
+
+#close-search-btn {
     display: none;
 }
