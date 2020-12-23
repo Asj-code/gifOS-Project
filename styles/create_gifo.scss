@@ -21,8 +21,8 @@
 
 @media screen and (min-width: 1220px) {
     #crear-gifo {
-        width: 85%;
-        height: 700px;
+        width: 75%;
+        height: 500px;
         display: flex;
         margin: auto;
         // border: 1px solid red;
@@ -30,9 +30,9 @@
 
     .content-gifo-camera {
         display: flex;
-        width: 70%;
-        height: 600px;
-        border: 1px solid blue;
+        width: 60%;
+        height: 500px;
+        border: 1px solid $base-color-light;
         text-align: center;
         margin: auto;
         p {
@@ -48,7 +48,7 @@
     }
 
     #videoWidget{
-        margin-left: 90px;
+        margin-left: 60px;
         display: none;
     }
 
@@ -57,21 +57,22 @@
     }
 
     .camera-img {
-        margin-top: 300px;
+        margin-top: 200px;
     }
 
     .camera-light {
-        margin-top: 320px;
+        margin-top: 220px;
     }
 
     .pelicula-img {
-        margin-top: 600px;
+        margin-top: 460px;
         margin-left: 10px;
     }
         
     #numbers {
         display: flex;
         justify-content: center;
+        margin-top: 20px;
         margin-left: 50px;
         margin-bottom: 10px;
     }
@@ -82,50 +83,48 @@
     }
 
     .long-bar {
-        background-color: blue;
+        background-color: $base-color-light;
         height: 10px;
         width: 70%;
         border-radius: 5px;
         margin-left: 300px;
     }
 
-    .comenzar-btn {
+    #camera-btn {
         height: 70px;
+        margin-right: -10px;
     }
 
     #grabar-btn {
         display: none;
-    }
-
-    #si-btn {
-        display: none;
+        height: 70px;
+        margin-right: -10px;
     }
 
     #finalizar-btn {
         display: none;
+        height: 70px;
+        margin-right: -10px;
     }
 
     #subir-btn {
         display: none;
+        height: 70px;
+        margin-right: -10px;
     }
 
     #video-content {
         color: $base-color-light;
         font-family: 'Montserrat', sans-serif;
         font-weight: bold;
-        font-size: 25px;
+        font-size: 20px;
         line-height: 30px;
-        margin-top: 700px;
+        margin-top: 530px;
         &:hover {
             cursor: pointer;
             text-decoration: underline $special-color; 
         }
-
     }
-
-
-
-
 }
 
 

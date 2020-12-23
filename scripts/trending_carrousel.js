@@ -74,3 +74,5 @@ sliderLeft.addEventListener('click', () => {
 //         modalC.style.visibility = 'hidden';
 //     }, 900);
 // });
+
+

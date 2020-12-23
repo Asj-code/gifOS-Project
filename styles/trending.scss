@@ -39,9 +39,6 @@
     width: 300px;
     height: 200px;
     margin: 10px;
-    &:hover {
-        color: #000;
-    }
 } 
 
 @media screen and (min-width: 1220px) {
@@ -57,68 +54,29 @@
 }
 
 
-////modal////
-
 // #ventana-modal {
-//     height: 650px;
-//     display: flex;
-//     justify-content: space-evenly;
-//     align-items: center;
-//     padding: 0 40px;
-//     background-color: yellow;
+//     display: none;
 // }
 
-.modal-img {
-    height: 60%;
-}
-
 .modal-container {
-    opacity: 0;
-    visibility: hidden;
-    position: fixed;
-    z-index: 100;
-    width: 100%;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    background: rgba(0,0,0,0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.modal {
-    width: 40%;
-    height: 50%;
-    background-color: red;
-    // overflow: hidden;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+    background-color: violet;
+    width: 300px;
+    height: 200px;
+    margin: 10px;
     position: relative;
-    transition: transform 1s;
-    transform: translateY(0%); /* -200% se va para arriba*/
-}
-
-/* la clase se agrega cuando quiero que se vaya el modal*/
-.modal-close {
-    transform: translateY(-200%);
+    
 }
 
 .modal-img {
-    height: 50%;
+    float: right;
+    margin: 5px;
+    &:hover {
+        cursor: pointer;
+    }
 }
 
-.close {
+.modal-text {
     position: absolute;
-    top: 5px;
-    right: 5px;
-    cursor: pointer;
-    display: inline-block;
-    width: 25px;
-    height: 25px;
-    background: white;
-    line-height: 25px;
+    margin-top: 130px;
+    margin-left: 10px;
 }

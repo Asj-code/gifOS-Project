@@ -25,22 +25,22 @@ let number2 = document.getElementById('btn-2');
 let number3 = document.getElementById('btn-3');
 
 let createContainer = document.getElementById('create-container');
-let video = document.getElementById('videoWidget');
+let videoWidget = document.getElementById('videoWidget');
 let videoContent = document.getElementById('video-content');
 
-//Configuración del video
-const config = {
-    audio: false,
-    video: {
-        height: 450,
-        width: 930
-    }
-}
+
+
+/////////Funcionalidad de los botones///////////
 
 //Cuando presiono el botón comenzar
 cameraBtn.addEventListener('click', () => {
     cameraBtn.style.display = 'none';
     record.style.display = 'block';
+
+
+
+    init();
+
     //cambia el contenido del html
     mainTitle.textContent = 'Nos das acceso a tu cámara?';
     paragraph.textContent = 'El acceso a tu cámara será válido sólo';
@@ -53,27 +53,13 @@ cameraBtn.addEventListener('click', () => {
     }
 });
 
-//cuando presiono el botón grabar se borra el contenido del html y aparece el video
-record.addEventListener('click', () => {
-    record.style.display = 'none';
-    endRecord.style.display = 'block';
-    createContainer.style.display = 'none';
-    videoWidget.style.display = 'block';
-    init();
-    counter();
-    //se fija si esta en modo nocturno o no la pagina
-    if (localStorage.getItem("theme-mode") == "dark") {
-        number1.src = '/assets/paso-a-paso-btn-dark-1.svg';
-        number2.src = '/assets/paso-a-paso-dark-hover-2.svg';
-    } else {
-        number1.src = '/assets/paso-a-paso-btn-1.svg';
-        number2.src = '/assets/paso-a-paso-btn-hover-2.svg';
-    }
-});
+
+
+
 
 
 //Función que calcula los segundos que corren de grabación
-function counter () {
+function counter() {
     let seconds = 0;
     let id = setInterval(() => {
         seconds++;
@@ -81,87 +67,100 @@ function counter () {
         endRecord.addEventListener('click', () => {
             clearInterval(id);
             videoContent.textContent = "REPETIR GRABACION";
-            
+
         });
-            
+
     }, 1000);
 }
 
-videoContent.addEventListener('click', () => {
-    videoContent.textContent = "";
-    record.style.display = 'block';
-    uploadGifo.style.display = 'none';
-});
 
-
-endRecord.addEventListener('click', () => {
-    endRecord.style.display = 'none';
-    uploadGifo.style.display = 'block';
-});
-//usar el modulo para calcular los minutos 3600 segundo 1 hora
-
-//Función para grabar el video ////
-async function init () {
-    try {
-        const stream = await navigator.mediaDevices.getUserMedia(config);
-        video.srcObject = stream;
-        video.play();
-    }
-    catch (error) {
-        console.log(error);
-        
+const config = {
+    audio: false,
+    video: {
+        height: 480,
+        width: 720
     }
 }
 
-async function recordGifo(stream) {
+
+async function init() {
+    try {
+        const stream = await navigator.mediaDevices.getUserMedia(config);
+        videoWidget.srcObject = stream;
+        videoWidget.play();
+        videoWidget.style.display = 'block';
+        createContainer.style.display = 'none';
+
+        test(stream);
+
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+
+async function test(stream) {
     let recorder = RecordRTC(stream, {
         type: 'gif'
     });
 
     record.addEventListener('click', () => {
         recorder.startRecording();
+        record.style.display = 'none';
+        endRecord.style.display = 'block';
+        counter();
+        test(stream);
+        // se fija si esta en modo nocturno o no la pagina
+        if (localStorage.getItem("theme-mode") == "dark") {
+            number1.src = '/assets/paso-a-paso-btn-dark-1.svg';
+            number2.src = '/assets/paso-a-paso-dark-hover-2.svg';
+        } else {
+            number1.src = '/assets/paso-a-paso-btn-1.svg';
+            number2.src = '/assets/paso-a-paso-btn-hover-2.svg';
+        }
     });
-    //recorder.startRecording();
 
-    endRecord.addEventListener('click', 
-    recorder.stopRecording(function () {
-        let blob = recorder.getBlob();
-        invokeSaveAsDialog(blob);
-        // saveGif(blob);
-    }));
+    endRecord.addEventListener('click', () => {
+        endRecord.style.display = 'none';
+        uploadGifo.style.display = 'block';
+        recorder.stopRecording(function () {
+            let blob = recorder.getBlob();
+            save(blob);
+        })
+    });
+
+    videoContent.addEventListener('click', () => {
+        videoContent.textContent = "";
+        record.style.display = 'block';
+        uploadGifo.style.display = 'none';
+        test(stream);
+    });
+
 }
 
-/////
-// usar fetch para subir el gif POST
 
-// necesito url para subir el gif
+async function save(gif) {
+    try {
+        const API_KEY = 'IxndpBv8XXCauGIwjs48PBQm8ZbXIwQq';
+        const URL = `https://upload.giphy.com/v1/gifs?api_key=${API_KEY}`;
+        const formData = new FormData();
+        formData.append('file', gif);
+        console.log(gif);
+        console.log(formData);
 
-// Buscar info de como usar el POST con fetch
 
-// Como subir data en la peticion
+        const apiConfig = {
+            mode: "cors",
+            method: 'POST',
+            body: formData
+        }
 
-//obtener api_key
+        const response = await fetch(URL, apiConfig);
+        const json = await response.json();
+        console.log(json);
 
-// loguear la respuesta
-
-//recueprar el id para sumarlo a la pagina de los gifs
-
-//get gif by id endpoint (en la pagina de giphy) original
-// en el local estorage guarda el id del gif para poder subirlo y quede en la pagina
-
-async function saveGif(gif) {
-    const API_KEY = 'IxndpBv8XXCauGIwjs48PBQm8ZbXIwQq';
-    const URL = `https://upload.giphy.com/v1/gifs?api_key=${API_KEY}`;
-    const formData = new FormData();
-    formData.append('file', gif);
-    const apiConfig = {
-        method: 'POST',
-        body: formData
+    } catch (error) {
+        console.log(error);
         
     }
-    const response = await fetch(URL, apiConfig);
-    const json = await response.json();
-
-    console.log(json);
-    
 }
