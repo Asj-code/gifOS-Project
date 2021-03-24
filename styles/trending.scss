@@ -39,6 +39,7 @@
     width: 300px;
     height: 200px;
     margin: 10px;
+
 } 
 
 @media screen and (min-width: 1220px) {
@@ -54,17 +55,12 @@
 }
 
 
-// #ventana-modal {
-//     display: none;
-// }
-
-.modal-container {
+.modal-container{
     background-color: violet;
     width: 300px;
     height: 200px;
     margin: 10px;
     position: relative;
-    
 }
 
 .modal-img {

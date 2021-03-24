@@ -1,18 +1,17 @@
-
 const api_key = 'IxndpBv8XXCauGIwjs48PBQm8ZbXIwQq';
 var offset = 0;
 
 async function getTrendingGifs(offset) {
-    
+
     let url = `https://api.giphy.com/v1/gifs/trending?api_key=${api_key}&offset=${offset}&limit=3`;
     let response = await fetch(url);
     let result = await response.json();
     createThreeGifCards(result);
     return result;
- 
+
 };
 
-function createThreeGifCards (result) {
+function createThreeGifCards(result) {
 
     let card1 = createGifCard(result.data[0]);
     let card2 = createGifCard(result.data[1]);
@@ -30,13 +29,22 @@ function createGifCard(gif) {
     div.innerHTML = `
         <img src=${gif.images.original.url} class='gif-img' id='gif'>
     `;
+
+    div.addEventListener("click", () => {
+        console.log("hola");
+        let modal = createModal();
+        div.replaceChild(modal, div.firstChild);
+    });
+    
     return div;
+
+
 };
 
 getTrendingGifs();
 
 let sliderRight = document.getElementById('right');
-let sliderLeft = document.getElementById('left'); 
+let sliderLeft = document.getElementById('left');
 
 sliderRight.addEventListener('click', () => {
     offset = offset + 3;
@@ -53,26 +61,31 @@ sliderLeft.addEventListener('click', () => {
 
 ///modal/////
 
-// let cerrar = document.querySelector('.close');
-// let abrir = document.querySelector('.cta');
-// let modal = document.querySelector('.modal');
-// let modalC = document.querySelector('.modal-container');
-
-// abrir.addEventListener('click', function(e){
-//     e.preventDefault();
-//     modalC.style.opacity = '1';
-//     modalC.style.visibility = 'visible';
-//     modal.classList.toggle('modal-close');
-
-// });
-
-// cerrar.addEventListener('click', function() {
-//     modal.classList.toggle('modal-close');
+function createModal() {
+    console.log("createmodal");
     
-//     setTimeout(function(){
-//         modalC.style.opacity = '0';
-//         modalC.style.visibility = 'hidden';
-//     }, 900);
-// });
+    let modalWindow = document.createElement('div');
+    modalWindow.setAttribute("id", "ventana-modal");
 
+    let modalContainer = document.createElement('div');
+    modalContainer.setAttribute("class", "modal-container");
+
+    let modalImg = document.createElement('div');
+    modalImg.setAttribute("class", "modal-img");
+    modalImg.innerHTML = `
+        <img src="assets/favorite-icon.svg">
+        <img src="assets/download-icon.svg">
+        <img src="assets/max-icon.svg">
+    `
+    let modalText = document.createElement('div');
+    modalText.setAttribute("class", "modal-text");
+    modalText.innerHTML = `
+    <p class="modal-content">User</p>
+    <h3 class="modal-content">Title</h3>
+    `
+    modalContainer.appendChild(modalImg);
+    modalContainer.appendChild(modalText);
+    let node = modalWindow.appendChild(modalContainer);
+    return node;
+};
 

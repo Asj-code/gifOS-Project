@@ -38,11 +38,21 @@
 
             <div id="input-ctn">
                 <input type="text" id="search" placeholder="Busca GIFOS y más...">
+                
+                <ul id="box-search">
+                    <li><a href="#" id="link-gif1"><img src="assets/search-icon.svg"></a></li>
+                    <li><a href="#" id="link-gif2"><img src="assets/search-icon.svg"></a></li>
+                    <li><a href="#" id="link-gif3"><img src="assets/search-icon.svg"></a></li>
+                    <li><a href="#" id="link-gif4"><img src="assets/search-icon.svg"></a></li>
+                    <li><a href="#" id="link-gif5"><img src="assets/search-icon.svg"></a></li>
+                </ul>
                 <div id="search-result"><img src="assets/search-icon.svg" id="search-icon" alt="search icon to see gifos"></div>
                 <div id="search-result"><img src="assets/close-search-btn.svg" id="close-search-btn" alt="search icon to see gifos"></div>
             </div>
-            
-            
+
+            <div id="gif-name"></div>
+
+
         <section id="gif-section">
             <template id="gif-template">
                 <div id="gifs">
@@ -73,10 +83,26 @@
 
             <div class="main-trendign-container">
                 <img class="slider" id="left" src="/assets/slider-left-btn.svg" alt="slide gifos to the left button">
+            
             <div id="main-gifs-container">
                 <div></div>
                 <div></div>
                 <div></div>
+
+                
+                <!-- <div id="ventana-modal">
+                    <div class="modal-container">
+                        <div class="modal-img">
+                          <img src="assets/favorite-icon.svg" alt="">
+                          <img src="assets/download-icon.svg" alt="">
+                          <img src="assets/max-icon.svg" alt="">
+                        </div>
+                        <div class="modal-text">
+                            <p class="modal-content">User</p>
+                            <h3 class="modal-content">Title</h3>
+                        </div>
+                    </div>
+                </div> -->
             <!-- Imágenes creadas con javascript -->
             </div>
                 <img class="slider" id="right" src="/assets/slider-right-btn.svg" alt="slide gifos to the right button">  
@@ -84,19 +110,9 @@
         </section>
 
         
-        <section id="ventana-modal">
-            <div class="modal-container">
-                <div class="modal-img">
-                  <img src="assets/favorite-icon.svg" alt="">
-                  <img src="assets/download-icon.svg" alt="">
-                  <img src="assets/max-icon.svg" alt="">
-                </div>
-                <div class="modal-text">
-                    <p class="modal-content">User</p>
-                    <h3 class="modal-content">Title</h3>
-                </div>
-            </div>
-        </section> 
+        <!-- <section id="ventana-modal">
+            
+        </section>  -->
     </main>
 
     <footer>
@@ -111,7 +127,6 @@
     </footer>
 
     <script src="scripts/trending_carrousel.js" type="module"></script> 
-    <script src="scripts/main_functions.js"></script>
     <script src="scripts/dark_mode.js"></script>
     <script src="scripts/slider-btns.js"></script> 
     <script src="scripts/search_bar.js"></script>
